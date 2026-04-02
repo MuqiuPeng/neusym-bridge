@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data and checkpoints (large binary files)
+data/
+checkpoints/
+/results/
+*.npy
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Environments
+.venv/
+venv/

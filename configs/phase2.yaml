@@ -1,0 +1,23 @@
+# Phase 2: Does common structure correspond to physics?
+svcca:
+  n_components: 10
+  variance_threshold: 0.99
+  correlation_threshold: 0.7
+
+sindy:
+  threshold: 0.05
+  alpha: 0.05
+  poly_degree: 2
+
+plans:
+  a_dims: 1
+  b_dims: auto  # based on significant SVCCA directions
+
+transfer:
+  nonlinear_beta: 0.3
+  nonlinear_trajectories: 100
+
+thresholds:
+  correlation_min: 0.9
+  sindy_r2_min: 0.7
+  transfer_retention_min: 0.6

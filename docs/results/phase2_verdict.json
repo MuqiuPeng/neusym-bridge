@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "Common directions extracted (corr > 0.9)": true,
+    "SINDy R\u00b2 > 0.7 (at least one plan)": false,
+    "Recovered equation has linear decay": false,
+    "Transfer retention > 0.6": false,
+    "Intervention shows causal effect": true
+  },
+  "passed_count": 2,
+  "total_checks": 5,
+  "overall_pass": false,
+  "metrics": {
+    "max_correlation": 0.9985266401369488,
+    "score_plan_a": 0.21845714156394125,
+    "score_plan_b": 0.3240322036601875,
+    "transfer_retention": -0.26497840256472566,
+    "n_relations": 15
+  },
+  "phase3_inputs": {
+    "best_plan": "plan_b",
+    "best_score": 0.3240322036601875,
+    "n_relations": 15,
+    "transfer_retention": -0.26497840256472566
+  }
+}

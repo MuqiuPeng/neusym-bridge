@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "Scenario A: Normal collapse": true,
+    "Scenario A: Provenance chain complete": true,
+    "Scenario B: Contradiction triggers retraction": true,
+    "Scenario B: Minimal retraction (unrelated preserved)": true,
+    "Scenario C: Active query generated correctly": true,
+    "Integration: Full cycle without crash": true
+  },
+  "passed_count": 6,
+  "total_checks": 6,
+  "overall_pass": true,
+  "scenario_a": {
+    "passed": true,
+    "collapsed": true,
+    "cascaded": true,
+    "provenance_complete": true,
+    "confidence": 0.9711
+  },
+  "scenario_b": {
+    "passed": true,
+    "retraction_triggered": true,
+    "minimal_retraction": true,
+    "cascade_retracted": true,
+    "observations_preserved": true
+  },
+  "scenario_c": {
+    "passed": true,
+    "active_query_correct": true,
+    "query_driven_collapse": true,
+    "uncertain_correct": true
+  },
+  "integration": {
+    "passed": true,
+    "build_ok": true,
+    "retract_ok": true,
+    "rebuild_ok": true
+  }
+}
