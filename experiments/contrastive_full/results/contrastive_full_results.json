@@ -1,0 +1,52 @@
+{
+  "verify": {
+    "er_contrastive": 27.335195541381836,
+    "er_reconstruction": 22.16257667541504,
+    "cka": 0.7939854264259338
+  },
+  "interface_contrastive": {
+    "aucs": [
+      0.7412781036683793,
+      0.9952879146128438,
+      0.6365083564412808
+    ],
+    "avg_active": 2.3566,
+    "collapse_rate": 0.515
+  },
+  "interface_reconstruction": {
+    "aucs": [
+      0.7899379371828282,
+      0.9989380877799406,
+      0.7264729612072492
+    ],
+    "avg_active": 2.3086,
+    "collapse_rate": 0.485
+  },
+  "planning": {
+    "recon_full": {
+      "success_rate": 0.0,
+      "avg_distance": 252.0375582018188,
+      "explanation_rate": 1.0,
+      "n_tasks": 100
+    },
+    "recon_pure": {
+      "success_rate": 0.0,
+      "avg_distance": 773.6159018513785,
+      "explanation_rate": null,
+      "n_tasks": 100
+    },
+    "contrastive_full": {
+      "success_rate": 0.0,
+      "avg_distance": 97.80886848795483,
+      "explanation_rate": 0.0,
+      "n_tasks": 100
+    },
+    "contrastive_pure": {
+      "success_rate": 0.0,
+      "avg_distance": 337.5270200424734,
+      "explanation_rate": null,
+      "n_tasks": 100
+    }
+  },
+  "outcome": "A"
+}

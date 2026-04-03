@@ -1,0 +1,54 @@
+{
+  "reconstruction": {
+    "name": "reconstruction",
+    "effective_rank": 22.161048889160156,
+    "r2_curvature": 0.5993493288747427,
+    "r2_velocity": 0.8414386525828481,
+    "r2_tip_position": 0.3434710067779996,
+    "sindy_r2": 0.2929996228899897,
+    "sindy_threshold": 1.5077692031860352,
+    "planning_distance": 773.6996120751949
+  },
+  "predictive": {
+    "name": "predictive",
+    "effective_rank": 18.224990844726562,
+    "r2_curvature": 0.5948011983817008,
+    "r2_velocity": 0.8053820203969325,
+    "r2_tip_position": 0.33540362727157874,
+    "sindy_r2": 0.47920255409073875,
+    "sindy_threshold": 1.3387842178344727,
+    "planning_distance": 907.5046939243408
+  },
+  "contrastive": {
+    "name": "contrastive",
+    "effective_rank": 27.303409576416016,
+    "r2_curvature": 0.5008778822964212,
+    "r2_velocity": 0.7301823825997921,
+    "r2_tip_position": 0.35075057354461564,
+    "sindy_r2": 0.25609692356509506,
+    "sindy_threshold": 0.08044322729110719,
+    "planning_distance": 337.4733444017387
+  },
+  "cka_matrix": [
+    [
+      1.0,
+      0.0006349519826471806,
+      0.0007219261606223881
+    ],
+    [
+      0.0006349519826471806,
+      1.0,
+      0.0011252384865656495
+    ],
+    [
+      0.0007219261606223881,
+      0.0011252384865656495,
+      1.0
+    ]
+  ],
+  "cka_names": [
+    "reconstruction",
+    "predictive",
+    "contrastive"
+  ]
+}
