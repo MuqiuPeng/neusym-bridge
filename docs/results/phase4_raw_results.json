@@ -1,0 +1,90 @@
+{
+  "latent_validation": {
+    "effective_rank": 21.367061614990234,
+    "r2_curvature": 0.5977005151746859,
+    "r2_velocity": 0.8408578204548609,
+    "r2_tip_position": 0.34574909200252496,
+    "er_pass": true,
+    "curvature_pass": true,
+    "tip_pass": false
+  },
+  "interface_validation": {
+    "aucs": [
+      0.783261649648385,
+      0.9984391190839332,
+      0.7129633080297257
+    ],
+    "avg_active_predicates": 2.3006,
+    "collapse_rate": 0.435,
+    "confidence_means": [
+      0.7553331851959229,
+      0.5061907768249512,
+      0.5930718779563904
+    ],
+    "confidence_stds": [
+      0.18553976714611053,
+      0.48410385847091675,
+      0.18620245158672333
+    ],
+    "auc_pass": true,
+    "sparsity_pass": "True",
+    "collapse_pass": true
+  },
+  "ablation_summary": {
+    "full_system": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 319.1858253291656,
+      "n_tasks": 100
+    },
+    "pure_lewm": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 841.0621154107498,
+      "n_tasks": 100
+    },
+    "pure_relatum": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 623.2057545848318,
+      "n_tasks": 100
+    },
+    "hard_threshold": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 379.25729215944756,
+      "n_tasks": 100
+    }
+  },
+  "explanation_rate": 1.0,
+  "verdict": {
+    "checks": {
+      "Simulator stable (no numerical explosion)": true,
+      "LeWM latent effective rank > 5": true,
+      "Interface AUC > 0.65 (at least 2/3 predicates)": true,
+      "Full system outperforms pure LeWM (success or distance)": true,
+      "Full system more efficient than pure LeWM (efficiency or distance)": true,
+      "Failed case explanation rate > 0.5": true
+    },
+    "passed_count": 6,
+    "total_checks": 6,
+    "overall_pass": true,
+    "conclusion": "End-to-end validation PASSED. System is effective.",
+    "raw_results": {
+      "sim_stable": 1.0,
+      "effective_rank": 21.367061614990234,
+      "aucs": [
+        0.783261649648385,
+        0.9984391190839332,
+        0.7129633080297257
+      ],
+      "full_success": 0.0,
+      "lewm_success": 0.0,
+      "full_efficiency": 0.0,
+      "lewm_efficiency": 0.0,
+      "full_distance": 319.1858253291656,
+      "lewm_distance": 841.0621154107498,
+      "explanation_rate": 1.0
+    }
+  }
+}

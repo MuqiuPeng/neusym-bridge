@@ -1,0 +1,69 @@
+# Phase 4: End-to-end integration validation
+# Hardware: PC 4060 Ti (Tasks 4.1-4.3), optional cloud GPU (Task 4.4)
+
+# Tentacle simulation
+simulation:
+  n_segments: 20
+  n_cables: 4
+  rod_length: 1.0
+  rod_radius: 0.01
+  density: 1000
+  youngs_modulus: 1.0e+6
+  shear_modulus: 1.0e+4
+  dt: 1.0e-4
+  steps_per_action: 100
+  max_tension: 5.0
+
+# Dataset generation
+dataset:
+  n_trajectories: 1000
+  n_steps: 200
+  output_path: phase4/data/tentacle_data.h5
+
+# LeWM training
+lewm:
+  latent_dim: 64
+  n_epochs: 50
+  batch_size: 256
+  lr: 1.0e-3
+  lambda_recon: 1.0
+  lambda_pred: 1.0
+  val_split: 0.1
+  checkpoint_dir: phase4/checkpoints
+
+# Interface layer
+interface:
+  latent_dim: 64
+  warmup_epochs: 10
+  finetune_epochs: 20
+  lr: 1.0e-3
+  lambda_sparse: 0.01
+  predicates:
+    - curvature_high
+    - tension_saturated
+    - tip_deviation
+
+# Ablation experiments
+ablation:
+  n_tasks: 100
+  n_plan_steps: 50
+  planners:
+    - full_system
+    - pure_lewm
+    - pure_relatum
+    - hard_threshold
+
+# Acceptance thresholds
+thresholds:
+  effective_rank_min: 5
+  auc_min: 0.65
+  auc_pass_count: 2
+  explanation_rate_min: 0.5
+  collapse_rate_min: 0.1
+  collapse_rate_max: 0.9
+
+# Failure recovery parameters
+recovery:
+  dt_reduced: 5.0e-5
+  lambda_recon_increased: 5.0
+  warmup_epochs_increased: 30

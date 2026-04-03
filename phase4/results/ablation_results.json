@@ -1,0 +1,2939 @@
+{
+  "summary": {
+    "full_system": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 319.1858253291656,
+      "n_tasks": 100
+    },
+    "pure_lewm": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 841.0621154107498,
+      "n_tasks": 100
+    },
+    "pure_relatum": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 623.2057545848318,
+      "n_tasks": 100
+    },
+    "hard_threshold": {
+      "success_rate": 0.0,
+      "avg_efficiency": 0.0,
+      "avg_distance": 379.25729215944756,
+      "n_tasks": 100
+    }
+  },
+  "explanation_rate": 1.0,
+  "per_task": {
+    "full_system": [
+      {
+        "success": false,
+        "distance": 321.59043932376625,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8789038059922198,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 342.96090237582763,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8842884086370617,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 302.3994944265148,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8102345838155394,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 349.44785376862694,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8364556335555875,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 309.51878544676134,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7911975064839538,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 333.4055898261417,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8213554566740378,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 325.3820719502378,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8759409044679636,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 334.8535330319799,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8744063581877839,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 326.8698728676195,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9003923272766201,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 323.87310967778353,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8605034124119264,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 283.52800369624543,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.86005608027709,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 287.7122617592716,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8166442950372037,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 327.11453826432313,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8856965204985237,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 301.6575620571048,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8607191801297311,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 307.9244354353344,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8026869079124843,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 288.7633708169687,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7971016679281284,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 305.1828289688777,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.874844033391664,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 309.5357431747631,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9025130654967732,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 294.14856016628664,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8586231580492836,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 319.63788236260245,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8400242414828512,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 312.25127984308494,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8539890328798805,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 342.9450868376176,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.911763068500349,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 318.79039246543397,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8778236668315991,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 302.6932422434523,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.790557617852528,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 315.8596602554111,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9069654693785161,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 355.5146018451218,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8927046757283641,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 315.8346449998726,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8661514866710966,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 322.71434947560664,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8855428733001958,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 300.9176372362804,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8399472288495495,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 311.03716909472087,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7867391827241725,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 289.2507044642294,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8877605973391383,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 311.8441461567356,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8336893245948396,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 311.76620285796974,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8950827765909253,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 318.9392088998314,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8064751062015567,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 297.6808331278036,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8681850577551664,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 300.9839144345324,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.829528626172074,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 310.6049108878963,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8827312886123444,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 310.8558001618615,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8121618264704011,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 326.59123556217685,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8138879706726776,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 299.96196885292363,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8757859206533816,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 307.0246521085708,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8194083758670416,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 306.66007093927095,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7938522332026103,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 336.5648743097802,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.869720394919991,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 324.119004712732,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8778977414729319,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 339.8850555528144,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8469968764953784,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 307.85188649343667,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7830640758124332,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 352.22670361063405,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8928954582176196,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 323.39177663524663,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8839212149060671,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 290.58831778892625,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7410189835206573,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 373.8405445422138,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8716268117730657,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 329.43058810580743,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8802914133507294,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 308.89499287425144,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8529686790153583,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 316.6652964417827,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.840285850530389,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 286.00683451948436,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8202898832755068,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 343.9508058407759,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.916486490411657,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 313.8401271540705,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8121457581048013,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 297.11605650403664,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7828053153034453,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 416.51763617220314,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7830853962636297,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 333.00338358421067,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8441714029781338,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 312.52417949273917,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8713261588545578,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 321.21955358206384,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8552858619173058,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 320.44072901497594,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8851474162965438,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 327.1601993722801,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8562418173940927,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 316.4347175186051,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.926263090223074,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 325.6469991625724,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8203156049124765,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 320.9820443252921,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9065625939878963,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 298.4153252365297,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.893524753947073,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 333.58573794473693,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8465309739791529,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 345.2069151873749,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9373844029948053,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 334.5140677802192,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8883664707052468,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 353.71601504447517,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9041519024648892,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 348.63104675852924,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8925591720617376,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 298.452031326224,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8175045740126166,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 295.0061551235301,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.839538537606213,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 306.5895560503871,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8011122487204396,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 318.47518766677524,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.896711396892325,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 304.6633811457726,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8274977293504797,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 307.0731568982965,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8340008492490938,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 326.35665313244806,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.912816597472581,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 360.6665271116725,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8961017969588703,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 324.9358534866071,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8246597289711382,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 344.7605467426634,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8481124036688925,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 308.102030716839,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9020860135969855,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 340.8007973626463,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8830939211779558,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 360.1798556030108,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8989514500248674,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 304.74060380385566,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8600277609577027,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 320.25360979284244,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.843497935389621,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 301.5926610272349,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.7817577044032724,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 294.2327922131684,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8475783051755883,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 295.29416305988144,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.803742533877621,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 311.2827951282731,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.9160127193634615,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 283.386213453321,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8487333447015679,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 320.94737348843597,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.907085166624654,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 322.7420739326486,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8819623623705724,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 317.68840614163224,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8492354676419467,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 333.2379823566894,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8220424049904977,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 337.3160973908809,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.936357209085088,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 317.6187137862657,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8466785584001713,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 308.1570985954852,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8014353518814481,
+          "proof_steps": 1
+        }
+      },
+      {
+        "success": false,
+        "distance": 315.43024896883,
+        "total_energy": 0.0,
+        "efficiency": 0.0,
+        "relatum_diagnosis": {
+          "collapsed": true,
+          "confidence": 0.8790737456949351,
+          "proof_steps": 1
+        }
+      }
+    ],
+    "pure_lewm": [
+      {
+        "success": false,
+        "distance": 839.7274214255433,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 855.1859604345188,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 840.8857847907991,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 842.2783630076076,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 838.39533514114,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 832.7810985249525,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 828.2512143042338,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 834.0388588002616,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 846.4095314717692,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 840.9524963758081,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 844.2556882608541,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 834.4098497185968,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 845.9164698481363,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 850.8475347740213,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 843.3811829213645,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 852.5415394561076,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.4090804230549,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 847.9106339977159,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 847.6992722924136,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 833.9367610843617,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 847.3615128276787,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 841.4415450253225,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 837.3234481011409,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 857.8990748571913,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 828.3643251829461,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 818.7341805111474,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 832.087894656224,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 837.5587493372966,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 825.8924034425929,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 855.8000021089426,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 835.6814746460889,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 842.2018142692484,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 843.9160394781023,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 847.031392088944,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 862.6996626927571,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 841.8580707456948,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.1186020514152,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 832.9415879736115,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 853.0323342496755,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 855.189549694016,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 843.0087808539395,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 825.1569769756012,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 845.3049152814233,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 838.208540520527,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 844.3255769074825,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 850.7809800906778,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 841.1838326599176,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 838.8457055717722,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 840.1312164864808,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 835.7602618140841,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 842.2195954259219,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 841.5426670269503,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 842.713194621006,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 826.4595552449955,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 853.5344254102724,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 842.9741723367979,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 838.8646639499199,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 844.9559504595767,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 834.7578217755403,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 852.6016659802424,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 848.4429553654528,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.7419206947106,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 843.1908540301131,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 840.3551087792608,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 851.6367900820361,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.4361195714462,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 854.0715464544527,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 845.6591452499883,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 838.4353905306301,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.0336651179097,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 840.5199520135475,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 829.90524814778,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 857.8645921627153,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 821.5107706548856,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 834.8364908518047,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 850.3629056551758,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 832.1205504682897,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 828.8391114815157,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 846.5815185932278,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 851.368729775208,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 849.886439466601,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 844.0110457427321,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 834.6784023318633,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 833.9874176023369,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 843.2824263596817,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.2859176053947,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 828.9499836390229,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 844.8899607863659,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 845.539679684923,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 838.4785720433608,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 840.9579484761286,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 846.4787689867758,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 841.1293691344537,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 835.8698048872934,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 839.6018656368532,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 839.3945022046425,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 828.6550227836366,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 831.1130101318229,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 842.2260464368968,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 843.2037510676075,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      }
+    ],
+    "pure_relatum": [
+      {
+        "success": false,
+        "distance": 630.3919306266115,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 656.8452569025424,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 385.4085036225597,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 847.6714708400942,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 680.563949342048,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 629.6103011672975,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 377.146058994121,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 722.5679827058847,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 548.9352818334843,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 617.6039864680201,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 440.773054530837,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 802.1700357192931,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 768.5690942316558,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 679.3572331323261,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 906.0216513605866,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 622.913955331245,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 502.86781507617616,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 733.9009981668495,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 836.7812375709043,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 439.02366592872903,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 691.094480744396,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 698.4342169806549,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 511.7548872968516,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 366.15656800357357,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 646.3964635759918,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 363.55642361612365,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 541.6027507602732,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 440.992809486006,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 602.8569442703584,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 537.335562508207,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 823.673880793651,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 771.1943479416274,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 563.5326298872817,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 726.0439189999374,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 622.5388375131421,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 545.1388222619299,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 752.9277585987745,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 759.919008258535,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 512.9808696635054,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 577.2545103231416,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 660.0636279998472,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 703.1374783821,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 801.2521747759106,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 455.493449546864,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 407.70459336760956,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 584.3092937460173,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 676.8570301051697,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 733.3978045066826,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 745.6799175115692,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 390.30142720771937,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 723.5561102099388,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 657.1248953974715,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 546.9959620520784,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 511.0971484399616,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 792.0529681492451,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 543.0340783987992,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 681.578557872667,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 775.5554389613641,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 877.5626284019236,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 742.7253584314282,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 664.239027054397,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 750.9448533880721,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 810.9814141859304,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 443.672296488044,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 284.6408357515072,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 576.0257300253327,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 735.7922652448348,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 737.2954717127731,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 745.9474397659752,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 449.1171319466333,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 485.8548989730605,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 484.9723816247119,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 591.4331036603849,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 559.0853255214398,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 773.0592057027695,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 567.0809557197894,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 343.6965652417345,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 847.408291917784,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 722.3889416676066,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 647.8722468041711,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 735.9076275100351,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 468.5419610412667,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 711.2572734603267,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 561.7554898358865,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 595.3027250166189,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 461.16408994299485,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 340.0347991920803,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 556.9448513235479,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 716.0538777348496,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 424.9314875445459,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 424.1394019210362,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 765.3339463328563,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 446.34205127463804,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 496.8553242290814,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 714.9111762994413,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 881.4053223541129,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 726.7768970135943,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 896.9716272335017,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 609.5487738036978,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 670.8992745225096,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      }
+    ],
+    "hard_threshold": [
+      {
+        "success": false,
+        "distance": 372.2170386819599,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 381.5408275755767,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 316.6362323892296,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 408.28928858396205,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 364.3993706881611,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 345.9600394444581,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 382.0683284498341,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 373.8527804558287,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 365.6033279069826,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 371.9174003431305,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 317.32061480728015,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 464.09134265314106,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 417.60977791269454,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 421.3135693844306,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 337.7511772186164,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 345.10541977120846,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 325.2775594463238,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 394.4229628086307,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 375.09339162590476,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 371.2247129520785,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 374.1220387944087,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 391.4664574171911,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 425.39877019522874,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 352.3655990388595,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 357.91134147634875,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 447.53258262461185,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 358.5620044243585,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 466.81940505422017,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 447.20745850040623,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 404.3272630596894,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 334.0995154077702,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 378.9901168236601,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 405.7077601654769,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 384.26013126572474,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 316.5509570844384,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 339.4054233155378,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 494.3907657674234,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 341.2510339483207,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 391.26804128753247,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 496.4508991780784,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 350.9545760777139,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 381.7585412208657,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 427.0587240608141,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 350.913536046448,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 357.40682851471126,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 368.55838011415074,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 394.21378281379714,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 344.0884984346375,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 310.1759995591278,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 414.8268414000702,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 403.7302693653198,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 404.20663061710763,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 396.93967068745127,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 358.3863574375618,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 407.2471853627803,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 346.0260188385709,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 398.6144344464342,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 454.40782080277535,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 342.62100586745294,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 372.796690509065,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 374.1898141501533,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 403.15095092445375,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 385.09218436636706,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 391.0263744938884,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 363.2981567309298,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 348.66450613775555,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 320.38710876415297,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 427.59278771730766,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 396.8536097328273,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 431.79307813734914,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 384.6146555440508,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 401.65596198158147,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 348.8194119934891,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 323.6550730974739,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 326.8580535574869,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 398.8034625096374,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 349.0675595499068,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 317.08854924416033,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 350.276295585668,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 426.77093763829913,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 361.4900948376384,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 392.4724486863375,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 347.39381344633887,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 358.3783182378076,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 381.95080771915923,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 381.4040252507688,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 361.7881682458738,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 481.9412833911517,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 352.95858960753446,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 321.57433719683775,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 317.45250533914447,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 319.56892171785717,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 356.21855349761125,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 354.6541943001381,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 403.467652049555,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 454.1179504700768,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 439.1461162736189,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 352.8558117564912,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 393.4599539334332,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      },
+      {
+        "success": false,
+        "distance": 379.06261802486944,
+        "total_energy": 0.0,
+        "efficiency": 0.0
+      }
+    ]
+  }
+}

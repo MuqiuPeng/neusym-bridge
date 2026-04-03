@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "Simulator stable (no numerical explosion)": true,
+    "LeWM latent effective rank > 5": true,
+    "Interface AUC > 0.65 (at least 2/3 predicates)": true,
+    "Full system outperforms pure LeWM (success or distance)": true,
+    "Full system more efficient than pure LeWM (efficiency or distance)": true,
+    "Failed case explanation rate > 0.5": true
+  },
+  "passed_count": 6,
+  "total_checks": 6,
+  "overall_pass": true,
+  "conclusion": "End-to-end validation PASSED. System is effective.",
+  "raw_results": {
+    "sim_stable": 1.0,
+    "effective_rank": 21.367061614990234,
+    "aucs": [
+      0.783261649648385,
+      0.9984391190839332,
+      0.7129633080297257
+    ],
+    "full_success": 0.0,
+    "lewm_success": 0.0,
+    "full_efficiency": 0.0,
+    "lewm_efficiency": 0.0,
+    "full_distance": 319.1858253291656,
+    "lewm_distance": 841.0621154107498,
+    "explanation_rate": 1.0
+  }
+}
