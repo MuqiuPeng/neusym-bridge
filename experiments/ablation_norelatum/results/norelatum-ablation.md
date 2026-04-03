@@ -1,8 +1,8 @@
 # NoRelatum 消融实验报告
 
 **日期**：2026-04-04  
-**状态**：完成 -- Scenario C（Relatum 贡献极小）  
-**核心发现**：Contrastive encoder + Interface Layer 是性能提升的主要来源（337.5 -> 96.1, -71.5%），Relatum 推理层在 Contrastive 配置下几乎不触发（96.1 -> 97.1, +1.0%）。
+**状态**：完成 -- Scenario C（Relatum 有轻微负面影响）  
+**核心发现**：Contrastive encoder + Interface Layer 是性能提升的主要来源（337.5 -> 90.7, -73.1%），Relatum 推理层在 Contrastive 配置下有轻微负面影响（90.7 -> 95.1, +4.8%）。
 
 ---
 
@@ -42,18 +42,20 @@ Contrastive Full        97.8  (有 Interface, 有 Relatum)
 |------|-------------|-----------|---------|
 | recon_pure | 773.6 | N | N |
 | contrastive_pure | 337.5 | N | N |
-| **recon_full** | **244.8** | **Y** | **Y** |
-| **contrastive_norelatum** | **96.1** | **Y** | **N** |
-| **contrastive_full** | **97.1** | **Y** | **Y** |
+| recon_full | 246.2 | Y | Y |
+| **contrastive_norelatum** | **90.7** | **Y** | **N** |
+| contrastive_full | 95.1 | Y | Y |
 
 ### 贡献分解（Contrastive 路径）
 
 | 组件 | From | To | Delta | 比例 |
 |------|------|----|-------|------|
 | **Encoder** | 773.6 (recon_pure) | 337.5 (contr_pure) | -436.1 | **-56.4%** |
-| **Interface** | 337.5 (contr_pure) | 96.1 (contr_norelatum) | -241.4 | **-71.5%** |
-| **Relatum** | 96.1 (contr_norelatum) | 97.1 (contr_full) | +1.0 | **+1.0%** |
-| **Total** | 773.6 (recon_pure) | 97.1 (contr_full) | -676.5 | **-87.4%** |
+| **Interface** | 337.5 (contr_pure) | 90.7 (contr_norelatum) | -246.8 | **-73.1%** |
+| **Relatum** | 90.7 (contr_norelatum) | 95.1 (contr_full) | +4.4 | **+4.8%** |
+| **Total (best)** | 773.6 (recon_pure) | 90.7 (contr_norelatum) | -682.9 | **-88.3%** |
+
+NoRelatum safe step 统计：平均 40.2/50 步（80%）使用保守策略，Interface 的直接阈值判断积极介入。
 
 ---
 

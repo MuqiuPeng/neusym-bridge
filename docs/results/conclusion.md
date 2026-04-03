@@ -10,7 +10,7 @@
 
 ## 一句话结论
 
-> 多个独立训练的神经网络收敛到相同的 latent 结构（CKA=0.944），该结构编码了可通过干预验证的因果信息（3/4 方向单调因果），概率事实可经 Noisy-OR 坍缩为确定性知识并沿 Provenance 链正确撤回（20 个测试修复后全通过）。训练目标对照实验（A1）发现 Predictive 目标的 SINDy R² 比 Reconstruction 提升 64%，Contrastive encoder 接入完整系统后规划距离降至 97.1（比原始配置减少 87%）。精细消融表明 Interface Layer 是主要性能驱动（-71.5%），Relatum 推理层在高质量 encoder 下贡献极小（+1.0%）。
+> 多个独立训练的神经网络收敛到相同的 latent 结构（CKA=0.944），该结构编码了可通过干预验证的因果信息（3/4 方向单调因果），概率事实可经 Noisy-OR 坍缩为确定性知识并沿 Provenance 链正确撤回（20 个测试修复后全通过）。训练目标对照实验（A1）发现 Predictive 目标的 SINDy R² 比 Reconstruction 提升 64%，Contrastive encoder + Interface Layer 的规划距离降至 90.7（比原始配置减少 88%）。精细消融表明 Interface Layer 是主要性能驱动（-73.1%），Relatum 推理层在高质量 encoder 下有轻微负面影响（+4.8%）。
 
 ---
 
@@ -23,8 +23,8 @@
 | 3 坍缩机制 | 概率->确定性逻辑是否正确？ | **修复后 PASS** | 20 tests，首次 16/20，修复后 20/20 |
 | 4 端到端 | 完整系统是否优于各部分？ | **PASS 6/6** | 距离减少 62%，解释率 100% |
 | A1 训练目标 | 哪种训练目标最优？ | **完成** | Predictive SINDy +64%，Contrastive 规划最优 |
-| Contrastive Full | Contrastive 接入完整系统？ | **Scenario A** | 距离 97.1，比 Recon Full -61% |
-| NoRelatum 消融 | 各组件贡献多少？ | **Scenario C** | Interface -71.5%，Relatum +1.0% |
+| Contrastive Full | Contrastive 接入完整系统？ | **Scenario A** | 距离 95.1，比 Recon Full -61% |
+| NoRelatum 消融 | 各组件贡献多少？ | **Scenario C** | Interface -73.1%，Relatum +4.8% |
 
 ---
 
@@ -281,24 +281,26 @@ Contrastive Full System 是全项目最优配置。符号层对 Contrastive enco
 |------|-------------|-----------|---------|
 | recon_pure | 773.6 | N | N |
 | contrastive_pure | 337.5 | N | N |
-| recon_full | 244.8 | Y | Y |
-| **contrastive_norelatum** | **96.1** | **Y** | **N** |
-| **contrastive_full** | **97.1** | **Y** | **Y** |
+| recon_full | 246.2 | Y | Y |
+| **contrastive_norelatum** | **90.7** | **Y** | **N** |
+| contrastive_full | 95.1 | Y | Y |
 
 ### 贡献分解
 
 ```
 Encoder (Contrastive):   773.6 -> 337.5   -56.4%    基础质量
-Interface Layer:         337.5 ->  96.1   -71.5%    主要贡献
-Relatum reasoning:        96.1 ->  97.1    +1.0%    可忽略
-Total:                   773.6 ->  97.1   -87.4%
+Interface Layer:         337.5 ->  90.7   -73.1%    主要贡献
+Relatum reasoning:        90.7 ->  95.1    +4.8%    轻微负面
+Total:                   773.6 ->  90.7   -88.3%
 ```
+
+NoRelatum Planner 的 safe step 统计：平均 40.2/50 步（80%）使用保守策略，说明 Interface 的直接阈值判断积极介入了规划过程。
 
 ### 关键发现
 
-1. **Interface Layer 是关键组件**（-71.5%）：将 latent confidence 转换为策略切换信号，直接驱动规划质量
-2. **Relatum 在高质量 encoder 下不工作**（+1.0%）：Contrastive encoder 使 Interface 的硬阈值判断已经足够准确，Relatum 的 Noisy-OR 合并和坍缩阈值反而增加延迟
-3. **Relatum 对 Reconstruction 仍有价值**：recon_pure -> recon_full = -68.4%（Interface + Relatum 联合贡献），说明 Relatum 补偿了低质量 encoder 的不足
+1. **Interface Layer 是关键组件**（-73.1%）：将 latent confidence 转换为策略切换信号，直接驱动规划质量
+2. **Relatum 在高质量 encoder 下有轻微负面影响**（+4.8%）：Contrastive encoder 使 Interface 的硬阈值判断已经足够准确，Relatum 的 conjunction rule（要求 3 个 predicate 同时满足）+ Noisy-OR + 坍缩阈值使介入条件更严格，反而错过了最佳介入时机
+3. **Relatum 对 Reconstruction 仍有价值**：recon_pure -> recon_full = -68.2%（Interface + Relatum 联合贡献），说明 Relatum 补偿了低质量 encoder 的不足
 4. **Relatum 的真正价值是可解释性**：提供结构化的失败诊断（Phase 4 explanation rate = 100%），而非性能提升
 
 ---
@@ -331,8 +333,9 @@ Predictive 目标的 SINDy R2=0.479 显著优于 Reconstruction 的 0.293（+64%
 
 ### 6. Interface Layer 是系统的核心性能驱动（NoRelatum 消融）
 
-精细消融揭示了一个出乎意料的结论：在高质量 Contrastive encoder 下，Interface Layer 贡献 -71.5% 距离降低，而 Relatum 推理层仅 +1.0%。这说明：
+精细消融揭示了一个出乎意料的结论：在高质量 Contrastive encoder 下，Interface Layer 贡献 -73.1% 距离降低，而 Relatum 推理层反而有 +4.8% 的轻微负面影响。这说明：
 - **Interface 的直接感知 -> 策略映射**已足够有效，不需要逻辑推导
+- **Relatum 的 conjunction rule 在 Contrastive latent 下过于保守**，错过介入时机
 - **Relatum 的价值从性能工具转变为可解释性工具**
 - **Encoder 质量是地基**：好的 encoder 使简单的 Interface 就能达到最优，差的 encoder 才需要 Relatum 补偿
 
@@ -436,11 +439,11 @@ neusym-bridge/
 ```
 配置                          Avg Distance   vs baseline
 recon_pure (Phase 4 baseline)    773.6         --
-recon_full (Phase 4)             252.0         -67.4%
+recon_full (Phase 4)             246.2         -68.2%
 contrastive_pure (A1)            337.5         -56.4%
-contrastive_norelatum            96.1          -87.6%
-contrastive_full (最优)          97.1          -87.4%
+contrastive_full                  95.1         -87.7%
+contrastive_norelatum (最优)      90.7         -88.3%
 
-最优配置: Contrastive Encoder + Interface Layer
-Relatum: 可解释性附加件，非性能必需
+最优配置: Contrastive Encoder + Interface Layer (无 Relatum)
+Relatum: 可解释性附加件，非性能必需，高质量 encoder 下有轻微负面影响
 ```
