@@ -6,8 +6,8 @@ build/
 .eggs/
 
 # Data and checkpoints (large binary files)
-data/
-checkpoints/
+/data/
+/checkpoints/
 /results/
 *.npy
 

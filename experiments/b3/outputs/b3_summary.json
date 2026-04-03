@@ -1,0 +1,86 @@
+{
+  "n_samples": 50,
+  "causal_count": 4,
+  "n_directions": 4,
+  "directions": [
+    {
+      "direction": 1,
+      "label": "aux temp",
+      "monotone_rate": 1.0,
+      "effect_mean": 0.692052,
+      "effect_std": 0.043236,
+      "rho_mean": 1.0,
+      "rho_std": 0.0,
+      "p_effect": 0.0,
+      "is_causal": "True"
+    },
+    {
+      "direction": 2,
+      "label": "non-causal",
+      "monotone_rate": 1.0,
+      "effect_mean": 0.995414,
+      "effect_std": 0.03041,
+      "rho_mean": -1.0,
+      "rho_std": 0.0,
+      "p_effect": 0.0,
+      "is_causal": "True"
+    },
+    {
+      "direction": 3,
+      "label": "spatial struct",
+      "monotone_rate": 1.0,
+      "effect_mean": 1.258059,
+      "effect_std": 0.047899,
+      "rho_mean": -1.0,
+      "rho_std": 0.0,
+      "p_effect": 0.0,
+      "is_causal": "True"
+    },
+    {
+      "direction": 4,
+      "label": "main temp",
+      "monotone_rate": 1.0,
+      "effect_mean": 0.283039,
+      "effect_std": 0.045333,
+      "rho_mean": 1.0,
+      "rho_std": 0.0,
+      "p_effect": 0.0,
+      "is_causal": "True"
+    }
+  ],
+  "cross_model_consistent": 3,
+  "cross_model_details": [
+    {
+      "direction": 0,
+      "mono_rates": {
+        "model_b": 1.0,
+        "model_c": 1.0
+      },
+      "consistent": true
+    },
+    {
+      "direction": 1,
+      "mono_rates": {
+        "model_b": 1.0,
+        "model_c": 1.0
+      },
+      "consistent": true
+    },
+    {
+      "direction": 2,
+      "mono_rates": {
+        "model_b": 1.0,
+        "model_c": 1.0
+      },
+      "consistent": true
+    },
+    {
+      "direction": 3,
+      "mono_rates": {
+        "model_b": 1.0,
+        "model_c": 0.0
+      },
+      "consistent": false
+    }
+  ]
+}
