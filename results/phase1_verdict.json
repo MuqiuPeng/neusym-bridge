@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "CKA > 0.7": true,
+    "Effective rank CV < 20%": true,
+    "Procrustes residual < 0.2": true,
+    "CKA > noise-trained CKA": true,
+    "fc_latent in top-3 CKA layers": false
+  },
+  "passed_count": 4,
+  "total_checks": 5,
+  "overall_pass": true,
+  "metrics": {
+    "avg_cka": 0.9068936491948673,
+    "effective_rank_cv": 0.045324660700185565,
+    "avg_procrustes_residual": 0.14897200961907706,
+    "random_baseline_cka": 0.3072496443442582,
+    "control_noise_cka": 0.8341514440395654,
+    "control_overfit_cka": 0.7691499553524186
+  },
+  "phase2_inputs": {
+    "best_model_pair": [
+      "model_b",
+      "model_c"
+    ],
+    "n_signal_dims": 1,
+    "latent_dim": 32
+  }
+}
