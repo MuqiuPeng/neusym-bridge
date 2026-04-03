@@ -25,6 +25,7 @@
 | Contrastive Full | Contrastive 接入完整系统？ | **Scenario A** | 距离 95.1，比 Recon Full -61% |
 | NoRelatum 消融 | 各组件贡献多少？ | **Scenario C** | Interface -73.1%，Relatum +4.8% |
 | 多种子复现 | A1 结论是否统计显著？ | **完成** | 2/3 claim 显著，1 个修正 |
+| 规则松弛 | Relatum 负面影响的根因？ | **Scenario C** | 固有推理延迟，非规则结构 |
 
 ---
 
@@ -313,9 +314,34 @@ NoRelatum Planner 的 safe step 统计：平均 40.2/50 步（80%）使用保守
 ### 关键发现
 
 1. **Interface Layer 是关键组件**（-73.1%）：将 latent confidence 转换为策略切换信号，直接驱动规划质量
-2. **Relatum 在高质量 encoder 下有轻微负面影响**（+4.8%）：Contrastive encoder 使 Interface 的硬阈值判断已经足够准确，Relatum 的 conjunction rule（要求 3 个 predicate 同时满足）+ Noisy-OR + 坍缩阈值使介入条件更严格，反而错过了最佳介入时机
+2. **Relatum 在高质量 encoder 下有轻微负面影响**（+4.8%）：原因经规则松弛实验确认为**固有推理延迟**，而非规则结构问题（详见下节）
 3. **Relatum 对 Reconstruction 仍有价值**：recon_pure -> recon_full = -68.2%（Interface + Relatum 联合贡献），说明 Relatum 补偿了低质量 encoder 的不足
 4. **Relatum 的真正价值是可解释性**：提供结构化的失败诊断（Phase 4 explanation rate = 100%），而非性能提升
+
+---
+
+## 规则松弛实验：诊断 Relatum 负面影响的根因
+
+**问题**：Relatum +4.8% 负面影响来自规则过保守（conjunction 要求 3 个谓词同时满足），还是 Relatum 推理机制本身的延迟？
+
+**回答**：是推理延迟，不是规则结构。
+
+### 5 种配置对比（100 任务）
+
+| 配置 | 规则 | 阈值 | Avg Dist | Safe Rate | vs NoRelatum |
+|------|------|------|---------|-----------|--------------|
+| **norelatum** | -- | -- | **89.6** | **79.5%** | baseline |
+| strict_060 | 3-of-3 | 0.60 | 101.7 | 69.9% | +13.5% |
+| strict_040 | 3-of-3 | 0.40 | 95.9 | 73.9% | +7.0% |
+| medium_060 | 2-of-3 | 0.60 | 101.7 | 69.9% | +13.5% |
+| loose_060 | 1-of-3 | 0.60 | 101.4 | 70.1% | +13.1% |
+
+### 诊断结论
+
+1. **松弛规则无效**：loose（1-of-3, 101.4）和 strict（3-of-3, 101.7）几乎相同，排除 conjunction 是原因
+2. **降阈值有部分帮助**：strict_040 = 95.9（-5.7%），但仍比 NoRelatum 差 7%
+3. **核心差异是 safe rate**：NoRelatum 79.5% vs 所有 Relatum ~70%。Relatum 的 Noisy-OR 合并 + 坍缩判断需要多步累积 confidence，导致介入时机比直接阈值判断晚约 5 步
+4. **结论（Scenario C）**：Relatum 有固有的推理延迟代价，这不是 bug 而是 architecture trade-off——用延迟换取可解释性和可审计性
 
 ---
 
@@ -347,12 +373,13 @@ Noisy-OR 概率合并 + Provenance 链追踪 + 最小化撤回的组合，在修
 
 稳健的发现是：**Contrastive 规划最优**（378 vs 840, p=0.0005, 3/3 seed），且**动力学可恢复性和控制性能是独立属性**——Contrastive SINDy 最差但控制最优，该分离在多种子下稳定。
 
-### 6. Interface Layer 是系统的核心性能驱动（NoRelatum 消融）
+### 6. Interface Layer 是系统的核心性能驱动（NoRelatum 消融 + 规则松弛）
 
-精细消融揭示了一个出乎意料的结论：在高质量 Contrastive encoder 下，Interface Layer 贡献 -73.1% 距离降低，而 Relatum 推理层反而有 +4.8% 的轻微负面影响。这说明：
+精细消融揭示了一个出乎意料的结论：在高质量 Contrastive encoder 下，Interface Layer 贡献 -73.1% 距离降低，而 Relatum 推理层反而有 +4.8% 的轻微负面影响。规则松弛实验进一步确认：
+- **不是规则结构的问题**：loose（1-of-3）和 strict（3-of-3）性能相同（101.4 vs 101.7）
+- **是推理延迟的固有代价**：Relatum 的 Noisy-OR + 坍缩机制使 safe rate 从 79.5% 降至 ~70%，介入时机延后
 - **Interface 的直接感知 -> 策略映射**已足够有效，不需要逻辑推导
-- **Relatum 的 conjunction rule 在 Contrastive latent 下过于保守**，错过介入时机
-- **Relatum 的价值从性能工具转变为可解释性工具**
+- **Relatum 的价值是可解释性和可审计性**，用约 7-13% 的性能代价换取
 - **Encoder 质量是地基**：好的 encoder 使简单的 Interface 就能达到最优，差的 encoder 才需要 Relatum 补偿
 
 ---

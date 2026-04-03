@@ -1,0 +1,36 @@
+{
+  "results": {
+    "norelatum": {
+      "avg_distance": 89.6123323121169,
+      "std_distance": 6.104783863875877,
+      "avg_safe_steps": 39.74,
+      "safe_rate": 0.7948000000000001
+    },
+    "strict_060": {
+      "avg_distance": 101.73017539008747,
+      "std_distance": 3.3284521475369844,
+      "avg_safe_steps": 34.93,
+      "safe_rate": 0.6986
+    },
+    "strict_040": {
+      "avg_distance": 95.87275453419177,
+      "std_distance": 3.059408021816449,
+      "avg_safe_steps": 36.94,
+      "safe_rate": 0.7387999999999999
+    },
+    "medium_060": {
+      "avg_distance": 101.73017539008747,
+      "std_distance": 3.3284521475369844,
+      "avg_safe_steps": 34.93,
+      "safe_rate": 0.6986
+    },
+    "loose_060": {
+      "avg_distance": 101.36437483241208,
+      "std_distance": 2.914076459501935,
+      "avg_safe_steps": 35.04,
+      "safe_rate": 0.7008
+    }
+  },
+  "outcome": "C",
+  "n_tasks": 100
+}
