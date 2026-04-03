@@ -1,16 +1,15 @@
 # NEUSYM-BRIDGE 验证结论
 
 **项目**：从多个神经网络的公共表示中提取符号因果结构  
-**验证域**：2D 热传导（Phase 1-3）→ 触手控制（Phase 4）  
 **验证域**：2D 热传导（Phase 1-3） -> 触手控制（Phase 4 + 后续实验）  
 **日期**：2026-04-04  
-**总状态**：通过（含修复） — 四个 Phase 的核心假设经迭代验证或获得精确诊断，后续消融实验精确定位了各组件贡献
+**总状态**：通过（含修复） — 四个 Phase 的核心假设经迭代验证或获得精确诊断，后续消融实验精确定位了各组件贡献，多种子复现确认核心发现的统计显著性
 
 ---
 
 ## 一句话结论
 
-> 多个独立训练的神经网络收敛到相同的 latent 结构（CKA=0.944），该结构编码了可通过干预验证的因果信息（3/4 方向单调因果），概率事实可经 Noisy-OR 坍缩为确定性知识并沿 Provenance 链正确撤回（20 个测试修复后全通过）。训练目标对照实验（A1）发现 Predictive 目标的 SINDy R² 比 Reconstruction 提升 64%，Contrastive encoder + Interface Layer 的规划距离降至 90.7（比原始配置减少 88%）。精细消融表明 Interface Layer 是主要性能驱动（-73.1%），Relatum 推理层在高质量 encoder 下有轻微负面影响（+4.8%）。
+> 多个独立训练的神经网络收敛到相同的 latent 结构（CKA=0.944），该结构编码了可通过干预验证的因果信息（3/4 方向单调因果），概率事实可经 Noisy-OR 坍缩为确定性知识并沿 Provenance 链正确撤回（20 个测试修复后全通过）。Contrastive encoder 的规划距离统计显著优于 Reconstruction（378 +/- 39 vs 840 +/- 48, p=0.0005, 3/3 seed 一致），接入 Interface Layer 后降至 90.7（-88%）。精细消融表明 Interface Layer 是主要性能驱动（-73.1%），Relatum 推理层在高质量 encoder 下有轻微负面影响（+4.8%）。注：A1 单种子报告的 "Predictive SINDy R² +64%" 在多种子下不显著（p=0.48），已修正。
 
 ---
 
@@ -22,9 +21,10 @@
 | 2 物理对应 | 公共结构是否对应物理？ | **有条件通过** | SVCCA=0.999，3 因果方向 |
 | 3 坍缩机制 | 概率->确定性逻辑是否正确？ | **修复后 PASS** | 20 tests，首次 16/20，修复后 20/20 |
 | 4 端到端 | 完整系统是否优于各部分？ | **PASS 6/6** | 距离减少 62%，解释率 100% |
-| A1 训练目标 | 哪种训练目标最优？ | **完成** | Predictive SINDy +64%，Contrastive 规划最优 |
+| A1 训练目标 | 哪种训练目标最优？ | **完成** | Contrastive 规划最优（p=0.0005） |
 | Contrastive Full | Contrastive 接入完整系统？ | **Scenario A** | 距离 95.1，比 Recon Full -61% |
 | NoRelatum 消融 | 各组件贡献多少？ | **Scenario C** | Interface -73.1%，Relatum +4.8% |
+| 多种子复现 | A1 结论是否统计显著？ | **完成** | 2/3 claim 显著，1 个修正 |
 
 ---
 
@@ -231,22 +231,36 @@
 | Predictive | MSE(z_pred, z_t1) + 0.1 x VICReg(z_t) | VICReg 正则 |
 | Contrastive | MSE(z_pred, z_t1) + InfoNCE(z_t, z_t1, z_neg) | 对比学习 |
 
-### 核心结果
+### 核心结果（单种子 seed=42）
 
 | 指标 | Reconstruction | Predictive | Contrastive |
 |------|---------------|------------|-------------|
-| **SINDy R2** | 0.293 | **0.479 (+64%)** | 0.256 |
+| SINDy R2 | 0.293 | 0.479 | 0.256 |
 | Effective Rank | 22.2 | 18.2 | 27.3 |
 | **Planning Dist** | 773.7 | 907.5 | **337.5** |
 | Curvature Probe R2 | **0.599** | 0.595 | 0.501 |
 | Velocity Probe R2 | **0.841** | 0.805 | 0.730 |
 
-### 关键发现
+### 多种子复现（seeds: 42, 137, 999）
 
-1. **Predictive 目标显著提升动力学可恢复性**：SINDy R2 从 0.293 -> 0.479，effective rank 从 22.2 -> 18.2（更集中的 latent 结构）
-2. **动力学可恢复性 != 控制性能**：Contrastive SINDy 最差（0.256）但 Planning Distance 最优（337.5）
-3. **Reconstruction 保留最多物理信息**：probe R2 最高，但代价是动力学结构退化
-4. **跨 variant CKA ~ 0.001**（A1 采样对齐后修正为 ~0.794）：训练目标决定 latent 组织方式
+| 指标 | Reconstruction | Predictive | Contrastive | p-value |
+|------|---------------|------------|-------------|---------|
+| Effective Rank | 21.8 +/- 0.3 | 18.3 +/- 0.2 | 25.5 +/- 1.3 | R vs P: p=0.0006** |
+| SINDy R2 | 0.331 +/- 0.031 | 0.380 +/- 0.080 | 0.228 +/- 0.047 | R vs P: p=0.48 ns |
+| Planning Dist | 840 +/- 48 | 894 +/- 52 | **378 +/- 39** | R vs C: **p=0.0005** |
+
+Seed 一致性：
+- **Contrastive Planning < Recon Planning: 3/3 seed 一致**（稳健）
+- **Predictive ER < Recon ER: 3/3 seed 一致**（稳健）
+- Predictive SINDy > Recon SINDy: 2/3 seed（seed=137 反转，不稳健）
+
+### 关键发现（含多种子修正）
+
+1. **Contrastive 规划最优是稳健结论**（p=0.0005, 3/3 seed 一致）：均值 378 +/- 39 vs Reconstruction 840 +/- 48
+2. **Predictive 产生更低 effective rank 是稳健结论**（p=0.0006, 3/3 seed 一致）：18.3 vs 21.8
+3. **~~Predictive SINDy R2 +64%~~（已修正）**：单种子差异显著，多种子下 p=0.48 不显著。均值趋势一致（0.380 vs 0.331）但方差大，降级为"趋势性发现"
+4. **动力学可恢复性 != 控制性能**：Contrastive SINDy 最差但 Planning 最优，该分离在多种子下稳定
+5. **Reconstruction 保留最多物理信息**：probe R2 最高且方差极小
 
 ---
 
@@ -327,9 +341,11 @@ Noisy-OR 概率合并 + Provenance 链追踪 + 最小化撤回的组合，在修
 
 完整系统不仅在规划距离上减少了 62%，更重要的是所有失败案例都有 Relatum 提供的结构化诊断（解释率 100%）。纯神经方法在失败时无法给出原因。
 
-### 5. 训练目标决定 latent 的动力学质量（A1）
+### 5. 训练目标决定 latent 的几何结构，但 SINDy 改善不稳健（A1 + 多种子）
 
-Predictive 目标的 SINDy R2=0.479 显著优于 Reconstruction 的 0.293（+64%），验证了核心假设：reconstruction loss 迫使 encoder 保留高维空间信息，破坏了 latent 的动力学规则性。但动力学可恢复性（SINDy）和控制性能（Planning Distance）是两个独立属性——Contrastive 的 SINDy 最差但控制最优。
+多种子复现修正了 A1 的初始结论：Predictive 目标的 SINDy R2 均值（0.380）高于 Reconstruction（0.331），但 **p=0.48 不显著**（seed=137 方向反转）。Predictive 确实产生更低的 effective rank（18.3 vs 21.8, p=0.0006），说明训练目标改变了 latent 几何，但这不一定转化为 SINDy 可恢复性的提升。
+
+稳健的发现是：**Contrastive 规划最优**（378 vs 840, p=0.0005, 3/3 seed），且**动力学可恢复性和控制性能是独立属性**——Contrastive SINDy 最差但控制最优，该分离在多种子下稳定。
 
 ### 6. Interface Layer 是系统的核心性能驱动（NoRelatum 消融）
 
@@ -370,7 +386,7 @@ Phase 1-3 的结果已足够支撑一篇论文：
 
 Phase 4 + A1 + 消融实验的结果可以扩展为完整会议论文，核心 claim 升级为：
 
-> Training objective is a key determinant of dynamical recoverability in learned latent spaces. The neuro-symbolic bridge achieves optimal performance (87% distance reduction) through the combination of a temporal contrastive encoder and a learned interface layer, while the Relatum reasoning layer provides interpretability rather than performance gains when paired with high-quality encoders.
+> Training objective shapes latent geometry (effective rank p=0.0006) and control performance (planning distance p=0.0005), but does not reliably improve SINDy-based dynamical recoverability (p=0.48). The neuro-symbolic bridge achieves optimal performance (88% distance reduction) through a temporal contrastive encoder and a learned interface layer, while the Relatum reasoning layer provides interpretability rather than performance gains when paired with high-quality encoders. Multi-seed replication (3 seeds x 3 variants) confirms the contrastive planning advantage and effective rank reduction as statistically significant, while the SINDy improvement is a trend rather than a robust finding.
 
 ---
 

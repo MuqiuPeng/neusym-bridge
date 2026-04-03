@@ -1,0 +1,10 @@
+{
+  "variant": "contrastive",
+  "seed": 42,
+  "effective_rank": 27.303409576416016,
+  "sindy_r2": 0.25609692356509506,
+  "r2_curvature": 0.5008778822964212,
+  "r2_velocity": 0.7301823825997921,
+  "r2_tip_position": 0.35075057354461564,
+  "planning_distance": 337.4733444017387
+}

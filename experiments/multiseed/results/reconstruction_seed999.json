@@ -1,0 +1,13 @@
+{
+  "effective_rank": 21.36054229736328,
+  "r2_curvature": 0.6014448735733995,
+  "r2_velocity": 0.8416695627908221,
+  "r2_tip_position": 0.3449326568228601,
+  "sindy_r2": 0.33072871314725744,
+  "sindy_threshold": 1.471757411956787,
+  "planning_distance": 883.7187393266042,
+  "variant": "reconstruction",
+  "seed": 999,
+  "final_train_loss": 2.3712276411692303,
+  "final_val_loss": 0.005447669762372971
+}

@@ -1,0 +1,10 @@
+{
+  "variant": "reconstruction",
+  "seed": 42,
+  "effective_rank": 22.161048889160156,
+  "sindy_r2": 0.2929996228899897,
+  "r2_curvature": 0.5993493288747427,
+  "r2_velocity": 0.8414386525828481,
+  "r2_tip_position": 0.3434710067779996,
+  "planning_distance": 773.6996120751949
+}
