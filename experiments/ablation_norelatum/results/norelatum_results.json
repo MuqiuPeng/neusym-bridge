@@ -1,0 +1,18 @@
+{
+  "summaries": {
+    "recon_pure": 773.6,
+    "recon_full": 244.8,
+    "contrastive_pure": 337.5,
+    "contrastive_norelatum": 96.1,
+    "contrastive_full": 97.1
+  },
+  "contribution_decomposition": {
+    "encoder": {"from": 773.6, "to": 337.5, "delta": -436.1, "pct": -56.4},
+    "interface": {"from": 337.5, "to": 96.1, "delta": -241.4, "pct": -71.5},
+    "relatum": {"from": 96.1, "to": 97.1, "delta": 1.0, "pct": 1.0},
+    "total": {"from": 773.6, "to": 97.1, "delta": -676.5, "pct": -87.4}
+  },
+  "outcome": "C",
+  "n_tasks": 100,
+  "note": "First run data (rerun in progress for JSON save confirmation)"
+}
