@@ -18,12 +18,15 @@ import numpy as np
 
 try:
     import elastica as ea
-    from elastica.wrappers import (
-        BaseSystemCollection,
-        Connections,
-        Forcing,
-        CallBacks,
-    )
+    # v0.3.3+ exports directly from top-level module
+    try:
+        from elastica.wrappers import (
+            BaseSystemCollection, Connections, Forcing, CallBacks,
+        )
+    except ImportError:
+        from elastica import (
+            BaseSystemCollection, Connections, Forcing, CallBacks,
+        )
     HAS_ELASTICA = True
 except ImportError:
     HAS_ELASTICA = False

@@ -73,7 +73,7 @@ def tension_energy(tensions: np.ndarray, n_steps: int = 500, dt: float = 1e-4) -
 
 
 def execute_lever(
-    env, rod, lever_name: str, n_sim_steps: int = 200,
+    env, rod, lever_name: str, n_sim_steps: int = 50,
 ) -> tuple[np.ndarray, float]:
     """Execute a lever action via the physics simulator.
 

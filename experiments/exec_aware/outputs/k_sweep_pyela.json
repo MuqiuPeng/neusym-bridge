@@ -1,0 +1,26 @@
+{
+  "5": {
+    "reliable_edges": 16,
+    "nodes_with_outedge": 2,
+    "no_path_failures": 25,
+    "success_rate": 0.375,
+    "avg_energy": 0.0,
+    "n_tasks": 40
+  },
+  "10": {
+    "reliable_edges": 16,
+    "nodes_with_outedge": 2,
+    "no_path_failures": 25,
+    "success_rate": 0.375,
+    "avg_energy": 0.0,
+    "n_tasks": 40
+  },
+  "15": {
+    "reliable_edges": 16,
+    "nodes_with_outedge": 2,
+    "no_path_failures": 25,
+    "success_rate": 0.375,
+    "avg_energy": 0.0,
+    "n_tasks": 40
+  }
+}
