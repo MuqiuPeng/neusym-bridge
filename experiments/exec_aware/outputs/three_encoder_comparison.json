@@ -1,0 +1,56 @@
+{
+  "Contrastive_Dijkstra": {
+    "encoder": "Contrastive",
+    "planner": "Dijkstra",
+    "edges": 381,
+    "no_path": 0,
+    "success": 0.06,
+    "energy": 0.3,
+    "steps": 1.0
+  },
+  "Contrastive_Greedy": {
+    "encoder": "Contrastive",
+    "planner": "Greedy",
+    "edges": 381,
+    "no_path": 0,
+    "success": 0.1,
+    "energy": 0.32,
+    "steps": 1.0
+  },
+  "ExecAware_Dijkstra": {
+    "encoder": "ExecAware",
+    "planner": "Dijkstra",
+    "edges": 374,
+    "no_path": 0,
+    "success": 0.04,
+    "energy": 0.15,
+    "steps": 1.0
+  },
+  "ExecAware_Greedy": {
+    "encoder": "ExecAware",
+    "planner": "Greedy",
+    "edges": 374,
+    "no_path": 0,
+    "success": 0.04,
+    "energy": 0.4,
+    "steps": 1.0
+  },
+  "LeWM_Dijkstra": {
+    "encoder": "LeWM",
+    "planner": "Dijkstra",
+    "edges": 353,
+    "no_path": 0,
+    "success": 0.12,
+    "energy": 0.36666666666666664,
+    "steps": 1.1666666666666667
+  },
+  "LeWM_Greedy": {
+    "encoder": "LeWM",
+    "planner": "Greedy",
+    "edges": 353,
+    "no_path": 0,
+    "success": 0.14,
+    "energy": 0.45714285714285713,
+    "steps": 1.2857142857142858
+  }
+}
