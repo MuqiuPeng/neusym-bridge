@@ -1,0 +1,64 @@
+{
+  "calibration": {
+    "bend_up": {
+      "mean": 1.1999999999999997,
+      "std": 2.220446049250313e-16
+    },
+    "bend_down": {
+      "mean": 1.1999999999999997,
+      "std": 2.220446049250313e-16
+    },
+    "bend_left": {
+      "mean": 1.1999999999999997,
+      "std": 2.220446049250313e-16
+    },
+    "bend_right": {
+      "mean": 1.1999999999999997,
+      "std": 2.220446049250313e-16
+    },
+    "twist_cw": {
+      "mean": 1.6,
+      "std": 0.0
+    },
+    "twist_ccw": {
+      "mean": 1.6,
+      "std": 0.0
+    },
+    "extend": {
+      "mean": 2.3999999999999995,
+      "std": 4.440892098500626e-16
+    },
+    "retract": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  },
+  "graph_stats": {
+    "n_transitions": 3000,
+    "n_reliable_edges": 463,
+    "n_nodes_with_edges": 30
+  },
+  "planning": {
+    "relatum_minE": {
+      "success_rate": 0.56,
+      "avg_energy": 32.1857142857143,
+      "avg_steps": 24.892857142857142,
+      "avg_explore_steps": 24.892857142857142,
+      "avg_execute_steps": 0.0
+    },
+    "greedy": {
+      "success_rate": 0.86,
+      "avg_energy": 12.744186046511631,
+      "avg_steps": 11.534883720930232,
+      "avg_explore_steps": 0.0,
+      "avg_execute_steps": 11.534883720930232
+    },
+    "random": {
+      "success_rate": 0.4,
+      "avg_energy": 26.720000000000006,
+      "avg_steps": 23.15,
+      "avg_explore_steps": 0.0,
+      "avg_execute_steps": 0.0
+    }
+  }
+}
