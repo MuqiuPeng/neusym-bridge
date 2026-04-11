@@ -1,0 +1,28 @@
+{
+  "collapse_tests": {
+    "scenario_a": true,
+    "scenario_b": true,
+    "scenario_c": true
+  },
+  "planning": {
+    "relatum": {
+      "success_rate": 1.0,
+      "avg_steps": 13.44,
+      "avg_optimality": 1.0,
+      "avg_relatum_calls": 1.0
+    },
+    "greedy": {
+      "success_rate": 0.62,
+      "avg_steps": 14.161290322580646,
+      "avg_optimality": 0.9400171065493648,
+      "avg_relatum_calls": 0.0
+    },
+    "bfs": {
+      "success_rate": 1.0,
+      "avg_steps": 13.44,
+      "avg_optimality": 1.0,
+      "avg_relatum_calls": 0.0
+    }
+  },
+  "verdict": "Relatum achieves near-optimal planning under zero noise"
+}
