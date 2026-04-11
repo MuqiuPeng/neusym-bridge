@@ -46,13 +46,13 @@ def fig_lever_calibration(data: dict):
 
 
 def fig_planner_comparison(data: dict):
-    """Side-by-side: success rate and energy."""
-    planning = data["planning"]
+    """Side-by-side: success rate and execution energy."""
+    planning = data.get("execution", data.get("planning", {}))
     names = list(planning.keys())
-    display = {"relatum_minE": "Relatum\n(min-energy)", "greedy": "Greedy", "random": "Random"}
+    display = {"relatum_minE": "Relatum\n(min-energy)", "greedy_graph": "Greedy\n(graph)", "random_graph": "Random\n(graph)", "greedy": "Greedy", "random": "Random"}
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 5))
-    colors = {"relatum_minE": "#2196F3", "greedy": "#F44336", "random": "#9E9E9E"}
+    colors = {"relatum_minE": "#2196F3", "greedy_graph": "#F44336", "random_graph": "#9E9E9E", "greedy": "#F44336", "random": "#9E9E9E"}
     x = np.arange(len(names))
 
     # Success rate
@@ -70,8 +70,8 @@ def fig_planner_comparison(data: dict):
     ax2.bar(x, energy, color=[colors[n] for n in names], edgecolor="#666", linewidth=0.8)
     ax2.set_xticks(x)
     ax2.set_xticklabels([display.get(n, n) for n in names])
-    ax2.set_ylabel("Avg Energy (solved tasks)")
-    ax2.set_title("Energy Consumption")
+    ax2.set_ylabel("Avg Execution Energy (solved tasks)")
+    ax2.set_title("Execution Energy (Phase 2 only)")
 
     plt.suptitle("Lever Control: Planner Comparison", fontsize=13, fontweight="bold")
     plt.tight_layout()
@@ -82,27 +82,22 @@ def fig_planner_comparison(data: dict):
 
 
 def fig_step_breakdown(data: dict):
-    """Stacked bar: explore vs execute steps for Relatum planner."""
-    planning = data["planning"]
+    """Bar chart: execution steps per planner."""
+    planning = data.get("execution", data.get("planning", {}))
     names = list(planning.keys())
-    display = {"relatum_minE": "Relatum\n(min-energy)", "greedy": "Greedy", "random": "Random"}
-    colors_explore = "#FF9800"
-    colors_execute = "#2196F3"
+    display = {"relatum_minE": "Relatum\n(min-energy)", "greedy_graph": "Greedy\n(graph)", "random_graph": "Random\n(graph)", "greedy": "Greedy", "random": "Random"}
+    colors = {"relatum_minE": "#2196F3", "greedy_graph": "#F44336", "random_graph": "#9E9E9E", "greedy": "#F44336", "random": "#9E9E9E"}
 
     fig, ax = plt.subplots(figsize=(8, 5))
     x = np.arange(len(names))
 
-    explore = [planning[n].get("avg_explore_steps", 0) for n in names]
-    execute = [planning[n].get("avg_execute_steps", 0) for n in names]
-
-    ax.bar(x, explore, 0.5, label="Explore", color=colors_explore)
-    ax.bar(x, execute, 0.5, bottom=explore, label="Execute", color=colors_execute)
+    steps = [planning[n].get("avg_steps", 0) for n in names]
+    ax.bar(x, steps, 0.5, color=[colors.get(n, "#999") for n in names])
 
     ax.set_xticks(x)
     ax.set_xticklabels([display.get(n, n) for n in names])
-    ax.set_ylabel("Avg Steps (solved tasks)")
-    ax.set_title("Step Breakdown: Exploration vs Execution", fontsize=12)
-    ax.legend()
+    ax.set_ylabel("Avg Execution Steps (solved tasks)")
+    ax.set_title("Execution Steps (Phase 2 only)", fontsize=12)
 
     plt.tight_layout()
     out = OUTPUT_DIR / "fig3_step_breakdown.pdf"
