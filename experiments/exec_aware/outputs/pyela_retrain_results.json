@@ -1,0 +1,42 @@
+{
+  "5": {
+    "edges": 16,
+    "nodes_out": 2,
+    "no_path": 50,
+    "success_rate": 0.0,
+    "avg_energy": 0,
+    "avg_steps": 0
+  },
+  "10": {
+    "edges": 16,
+    "nodes_out": 2,
+    "no_path": 50,
+    "success_rate": 0.0,
+    "avg_energy": 0,
+    "avg_steps": 0
+  },
+  "15": {
+    "edges": 16,
+    "nodes_out": 2,
+    "no_path": 25,
+    "success_rate": 0.5,
+    "avg_energy": 0.0,
+    "avg_steps": 1.0
+  },
+  "20": {
+    "edges": 16,
+    "nodes_out": 2,
+    "no_path": 25,
+    "success_rate": 0.5,
+    "avg_energy": 0.0,
+    "avg_steps": 1.0
+  },
+  "30": {
+    "edges": 48,
+    "nodes_out": 3,
+    "no_path": 30,
+    "success_rate": 0.4,
+    "avg_energy": 0.0,
+    "avg_steps": 0.6
+  }
+}
