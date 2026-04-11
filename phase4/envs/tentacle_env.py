@@ -331,17 +331,20 @@ def set_state(rod, state: np.ndarray) -> None:
 def random_valid_state(seed: int | None = None) -> np.ndarray:
     """Generate a random physically plausible tentacle state.
 
-    Creates states by simulating from rest with random cable tensions
-    for a short duration, ensuring physical validity.
+    Creates states by simulating from rest with random cable tensions.
+    Uses 500 warmup steps with high-variance tensions to ensure the
+    tentacle reaches a significantly deformed posture.
     """
     rng = np.random.RandomState(seed)
 
     env, rod = make_tentacle()
 
-    # Apply random tensions for a few steps to get a non-trivial state
-    n_warmup = 50
+    # Apply random tensions to deform the tentacle substantially.
+    # 500 steps x dt=1e-4 = 0.05s physical time.
+    # Tension mean ~1.5 (30% of MAX) with high variance for diversity.
+    n_warmup = 500
     for _ in range(n_warmup):
-        tensions = rng.exponential(0.3, size=ACTION_DIM)
+        tensions = rng.exponential(1.5, size=ACTION_DIM)
         tensions = np.clip(tensions, 0.0, MAX_TENSION)
 
         cable_forces = compute_all_cable_forces(tensions)
