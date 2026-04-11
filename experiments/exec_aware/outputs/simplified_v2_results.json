@@ -1,0 +1,102 @@
+{
+  "k5_dijkstra": {
+    "k": 5,
+    "planner": "Dijkstra",
+    "edges": 101,
+    "nodes_out": 5,
+    "no_path": 0,
+    "success_rate": 0.12,
+    "avg_energy": 0.3,
+    "avg_steps": 1.0
+  },
+  "k5_greedy": {
+    "k": 5,
+    "planner": "Greedy",
+    "edges": 101,
+    "nodes_out": 5,
+    "no_path": 0,
+    "success_rate": 0.16,
+    "avg_energy": 0.3,
+    "avg_steps": 1.0
+  },
+  "k10_dijkstra": {
+    "k": 10,
+    "planner": "Dijkstra",
+    "edges": 223,
+    "nodes_out": 10,
+    "no_path": 0,
+    "success_rate": 0.08,
+    "avg_energy": 0.3,
+    "avg_steps": 1.0
+  },
+  "k10_greedy": {
+    "k": 10,
+    "planner": "Greedy",
+    "edges": 223,
+    "nodes_out": 10,
+    "no_path": 0,
+    "success_rate": 0.06,
+    "avg_energy": 0.3333333333333333,
+    "avg_steps": 1.0
+  },
+  "k15_dijkstra": {
+    "k": 15,
+    "planner": "Dijkstra",
+    "edges": 326,
+    "nodes_out": 15,
+    "no_path": 3,
+    "success_rate": 0.18,
+    "avg_energy": 0.36666666666666664,
+    "avg_steps": 1.3333333333333333
+  },
+  "k15_greedy": {
+    "k": 15,
+    "planner": "Greedy",
+    "edges": 326,
+    "nodes_out": 15,
+    "no_path": 3,
+    "success_rate": 0.18,
+    "avg_energy": 0.46666666666666656,
+    "avg_steps": 1.3333333333333333
+  },
+  "k20_dijkstra": {
+    "k": 20,
+    "planner": "Dijkstra",
+    "edges": 449,
+    "nodes_out": 20,
+    "no_path": 2,
+    "success_rate": 0.14,
+    "avg_energy": 0.39999999999999997,
+    "avg_steps": 1.4285714285714286
+  },
+  "k20_greedy": {
+    "k": 20,
+    "planner": "Greedy",
+    "edges": 449,
+    "nodes_out": 20,
+    "no_path": 2,
+    "success_rate": 0.14,
+    "avg_energy": 0.4714285714285714,
+    "avg_steps": 1.4285714285714286
+  },
+  "k30_dijkstra": {
+    "k": 30,
+    "planner": "Dijkstra",
+    "edges": 646,
+    "nodes_out": 30,
+    "no_path": 1,
+    "success_rate": 0.08,
+    "avg_energy": 0.6,
+    "avg_steps": 2.0
+  },
+  "k30_greedy": {
+    "k": 30,
+    "planner": "Greedy",
+    "edges": 646,
+    "nodes_out": 30,
+    "no_path": 1,
+    "success_rate": 0.08,
+    "avg_energy": 0.425,
+    "avg_steps": 1.25
+  }
+}
