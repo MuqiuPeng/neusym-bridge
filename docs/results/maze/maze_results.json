@@ -5,24 +5,33 @@
     "scenario_c": true
   },
   "planning": {
-    "relatum": {
+    "relatum_explore": {
       "success_rate": 1.0,
-      "avg_steps": 13.44,
-      "avg_optimality": 1.0,
-      "avg_relatum_calls": 1.0
+      "avg_total_steps": 22.54,
+      "avg_optimality": 0.6905172947067235,
+      "avg_explore_steps": 22.54,
+      "avg_execute_steps": 0.0
     },
     "greedy": {
       "success_rate": 0.62,
-      "avg_steps": 14.161290322580646,
+      "avg_total_steps": 14.161290322580646,
       "avg_optimality": 0.9400171065493648,
-      "avg_relatum_calls": 0.0
+      "avg_explore_steps": 0.0,
+      "avg_execute_steps": 0.0
     },
-    "bfs": {
+    "random_walk": {
+      "success_rate": 0.78,
+      "avg_total_steps": 128.25641025641025,
+      "avg_optimality": 0.14944837660305685,
+      "avg_explore_steps": 0.0,
+      "avg_execute_steps": 0.0
+    },
+    "bfs_oracle": {
       "success_rate": 1.0,
-      "avg_steps": 13.44,
+      "avg_total_steps": 13.44,
       "avg_optimality": 1.0,
-      "avg_relatum_calls": 0.0
+      "avg_explore_steps": 0.0,
+      "avg_execute_steps": 0.0
     }
-  },
-  "verdict": "Relatum achieves near-optimal planning under zero noise"
+  }
 }
