@@ -234,16 +234,17 @@ def step(
         for seg_idx in range(min(N_SEGMENTS, n_nodes)):
             rod.external_forces[:, seg_idx] += cable_forces[:, min(seg_idx, N_SEGMENTS - 1)]
 
+        # Capture forces BEFORE step() clears external_forces
+        f_before = rod.external_forces.copy()
+
         if HAS_ELASTICA:
             ea.integrate(ea.PositionVerlet(), env, dt, 1)
         else:
             rod.step(dt)
 
-        # Compute instantaneous power = |F . v|
+        # Compute instantaneous power = |F . v| using pre-step forces
         v = rod.velocity_collection
-        f = rod.external_forces
-        # Element-wise product summed over spatial dims
-        power = np.abs(np.sum(f * v[:, :f.shape[1]]))
+        power = np.abs(np.sum(f_before * v[:, :f_before.shape[1]]))
         total_work += power * dt
 
     state = extract_state(rod)

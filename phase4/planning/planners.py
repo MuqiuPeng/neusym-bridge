@@ -12,6 +12,7 @@ from abc import ABC, abstractmethod
 
 import numpy as np
 import torch
+import torch.nn.functional as F
 
 from ..envs.tentacle_env import (
     ACTION_DIM,
@@ -25,6 +26,8 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from src.neusym_bridge.relatum.interface import RelatumInterface
+
+LATENT_DIM = 64
 
 
 TENTACLE_RULES = """
@@ -295,3 +298,224 @@ class HardThresholdPlanner(BasePlanner):
                 ).squeeze(0)
 
         return actions
+
+
+class GradientPlanner(BasePlanner):
+    """Model-predictive planner using gradient descent through LeWM.
+
+    Instead of random candidate sampling, directly optimises the action
+    vector by backpropagating through the differentiable LeWM predictor:
+
+        loss = ||lewm.predict(z_current, a) - z_target||²
+        a   ← a - lr(dist) * ∇_a loss
+
+    Step size is adaptive: lr ∝ current_latent_dist, so the planner takes
+    large steps when far from the target and fine-grained steps when close.
+
+    Parameters
+    ----------
+    n_grad_steps : gradient descent iterations per action (default 10)
+    lr_scale     : learning-rate multiplier; effective lr = lr_scale * dist
+    """
+
+    def __init__(
+        self,
+        lewm: LeWMTentacle,
+        n_grad_steps: int = 10,
+        lr_scale: float = 0.1,
+        device: str = "cpu",
+    ):
+        self.lewm = lewm.eval().to(device)
+        self.n_grad_steps = n_grad_steps
+        self.lr_scale = lr_scale
+        self.device = device
+
+    def plan(self, start, target, n_steps=50):
+        t_start  = torch.tensor(start,  dtype=torch.float32).unsqueeze(0).to(self.device)
+        t_target = torch.tensor(target, dtype=torch.float32).unsqueeze(0).to(self.device)
+
+        with torch.no_grad():
+            z_current = self.lewm.encode(t_start).squeeze(0)
+            z_target  = self.lewm.encode(t_target).squeeze(0)
+
+        # Initial physical distance — used to normalise action scale each step
+        initial_phys_dist = float(np.linalg.norm(start - target)) + 1e-8
+
+        actions = []
+        for _ in range(n_steps):
+            latent_dist = (z_target - z_current).norm().item()
+            if latent_dist < 0.05:
+                actions.append(np.zeros(ACTION_DIM, dtype=np.float32))
+                continue
+
+            # Decode current latent → predicted physical state
+            with torch.no_grad():
+                s_pred = self.lewm.decode(z_current.unsqueeze(0)).squeeze(0).cpu().numpy()
+            phys_dist = float(np.linalg.norm(s_pred - target))
+
+            action = self._optimise_action(z_current, z_target,
+                                           latent_dist, phys_dist, initial_phys_dist)
+            actions.append(action.detach().cpu().numpy())
+
+            with torch.no_grad():
+                z_current = self.lewm.predict(
+                    z_current.unsqueeze(0), action.unsqueeze(0)
+                ).squeeze(0)
+
+        return actions
+
+    def _optimise_action(
+        self,
+        z_current: torch.Tensor,
+        z_target: torch.Tensor,
+        latent_dist: float,
+        phys_dist: float,
+        initial_phys_dist: float,
+    ) -> torch.Tensor:
+        # Action scale proportional to remaining physical distance:
+        #   large step when far, small step when close.
+        # Normalised to [0, MAX_TENSION * 0.5] range.
+        dist_ratio = min(1.0, phys_dist / initial_phys_dist)
+        scale = dist_ratio * MAX_TENSION * 0.5
+
+        delta_norm = F.normalize(z_target - z_current, dim=0).cpu().numpy()
+        bias_np = np.tile(delta_norm, ACTION_DIM // LATENT_DIM + 1)[:ACTION_DIM]
+        bias_range = bias_np.max() - bias_np.min() + 1e-8
+        bias_np = (bias_np - bias_np.min()) / bias_range
+
+        noise = np.random.exponential(0.3, size=ACTION_DIM).astype(np.float32)
+        a0 = np.clip(scale * (0.6 * bias_np + 0.4 * noise), 0.0, MAX_TENSION)
+
+        # Gradient LR also proportional to remaining dist
+        lr = self.lr_scale * dist_ratio
+
+        action = torch.tensor(a0, dtype=torch.float32,
+                               requires_grad=True, device=self.device)
+
+        for _ in range(self.n_grad_steps):
+            z_next = self.lewm.predict(
+                z_current.unsqueeze(0), action.unsqueeze(0)
+            ).squeeze(0)
+            loss = (z_next - z_target).pow(2).sum()
+            loss.backward()
+
+            with torch.no_grad():
+                action -= lr * action.grad
+                action.clamp_(0.0, MAX_TENSION)
+            action.grad = None
+
+        return action.detach()
+
+
+class EnergyOptimalPlanner(BasePlanner):
+    """Energy-minimizing planner via normalized joint scoring.
+
+    Each step:
+    1. Sample N candidate actions (latent-gradient biased, same as PureLEWM).
+    2. Predict z_next for each via LeWM predictor (no simulator calls).
+    3. Score each candidate with a normalized joint objective:
+         energy_norm = action.sum() / (ACTION_DIM * MAX_TENSION)   # in [0, 1]
+         dist_ratio  = dist(z_next, z_target) / dist(z_current, z_target)
+         score       = energy_norm + lambda_dist * dist_ratio
+       dist_ratio < 1 means making progress (rewarded),
+       dist_ratio > 1 means moving away (penalized).
+       Both terms are dimensionless — no scale mismatch.
+    4. Execute the minimum-score candidate.
+
+    lambda_dist controls the trade-off:
+      low  → energy dominates, may sacrifice some progress
+      high → progress dominates, approaches PureLEWM behaviour
+      1.0  → roughly equal weight (recommended default)
+    """
+
+    def __init__(
+        self,
+        lewm: LeWMTentacle,
+        n_candidates: int = 20,
+        lambda_dist: float = 1.0,
+        device: str = "cpu",
+    ):
+        self.lewm = lewm.eval().to(device)
+        self.n_candidates = n_candidates
+        self.lambda_dist = lambda_dist
+        self.device = device
+
+    def plan(self, start, target, n_steps=50):
+        t_start  = torch.tensor(start,  dtype=torch.float32).unsqueeze(0).to(self.device)
+        t_target = torch.tensor(target, dtype=torch.float32).unsqueeze(0).to(self.device)
+
+        with torch.no_grad():
+            z_current = self.lewm.encode(t_start).squeeze(0)
+            z_target  = self.lewm.encode(t_target).squeeze(0)
+
+        initial_phys_dist = float(np.linalg.norm(start - target)) + 1e-8
+
+        actions = []
+        for _ in range(n_steps):
+            delta = z_target - z_current
+            if delta.norm().item() < 0.05:
+                actions.append(np.zeros(ACTION_DIM, dtype=np.float32))
+                continue
+
+            with torch.no_grad():
+                s_pred = self.lewm.decode(z_current.unsqueeze(0)).squeeze(0).cpu().numpy()
+            phys_dist = float(np.linalg.norm(s_pred - target))
+
+            candidates = self._sample_candidates(delta, phys_dist, initial_phys_dist)
+            best_action, z_current = self._select_best(z_current, z_target, candidates)
+            actions.append(best_action.cpu().numpy())
+
+        return actions
+
+    def _sample_candidates(self, delta: torch.Tensor,
+                           phys_dist: float, initial_phys_dist: float) -> list[torch.Tensor]:
+        error_norm = delta.norm().item() + 1e-8
+        dist_ratio = min(1.0, phys_dist / initial_phys_dist)
+        scale = dist_ratio * MAX_TENSION * 0.5
+
+        delta_norm = (delta / error_norm).cpu().numpy()
+        bias_np = np.tile(delta_norm, ACTION_DIM // LATENT_DIM + 1)[:ACTION_DIM]
+        bias_range = bias_np.max() - bias_np.min() + 1e-8
+        bias_np = (bias_np - bias_np.min()) / bias_range
+
+        candidates = []
+        for _ in range(self.n_candidates):
+            noise = np.random.exponential(0.3, size=ACTION_DIM).astype(np.float32)
+            action_np = np.clip(
+                scale * (0.6 * bias_np + 0.4 * noise), 0.0, MAX_TENSION
+            )
+            candidates.append(
+                torch.tensor(action_np, dtype=torch.float32).to(self.device)
+            )
+        return candidates
+
+    def _select_best(
+        self,
+        z_current: torch.Tensor,
+        z_target: torch.Tensor,
+        candidates: list[torch.Tensor],
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        current_dist = (z_current - z_target).norm().item() + 1e-8
+        max_energy = ACTION_DIM * MAX_TENSION  # normalisation constant
+
+        best_action = candidates[0]
+        best_z_next = z_current
+        best_score = float("inf")
+
+        with torch.no_grad():
+            for action in candidates:
+                z_next = self.lewm.predict(
+                    z_current.unsqueeze(0), action.unsqueeze(0)
+                ).squeeze(0)
+
+                energy_norm = action.sum().item() / max_energy          # [0, 1]
+                dist_ratio  = (z_next - z_target).norm().item() / current_dist
+
+                score = energy_norm + self.lambda_dist * dist_ratio
+
+                if score < best_score:
+                    best_score  = score
+                    best_action = action
+                    best_z_next = z_next
+
+        return best_action, best_z_next
