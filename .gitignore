@@ -26,5 +26,8 @@ venv/
 .claude/
 
 # Large generated datasets / diagnostic dumps
+# Training checkpoints and large generated datasets
+checkpoints/
+*.pt
 *.h5
 *.pkl
