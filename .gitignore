@@ -21,3 +21,12 @@ build/
 # Environments
 .venv/
 venv/
+
+# Claude Code local state (per-machine, includes worktrees)
+.claude/
+
+# Training checkpoints and large generated datasets
+checkpoints/
+*.pt
+*.h5
+*.pkl
