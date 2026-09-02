@@ -18,12 +18,15 @@ import numpy as np
 
 try:
     import elastica as ea
-    from elastica.wrappers import (
-        BaseSystemCollection,
-        Connections,
-        Forcing,
-        CallBacks,
-    )
+    # v0.3.3+ exports directly from top-level module
+    try:
+        from elastica.wrappers import (
+            BaseSystemCollection, Connections, Forcing, CallBacks,
+        )
+    except ImportError:
+        from elastica import (
+            BaseSystemCollection, Connections, Forcing, CallBacks,
+        )
     HAS_ELASTICA = True
 except ImportError:
     HAS_ELASTICA = False
@@ -122,7 +125,9 @@ class SimplifiedRod:
             self.position_collection[1, i] = i * self.element_length
 
         # Damping coefficient
-        self.damping = 0.05
+        # Set to critical damping (mass/dt = 0.016/1e-4 ≈ 160) for quasi-static
+        # behaviour: forces map directly to deformation rather than velocity accumulation.
+        self.damping = 160.0
 
     def compute_internal_forces(self) -> np.ndarray:
         """Compute elastic restoring forces from bending."""
@@ -231,16 +236,17 @@ def step(
         for seg_idx in range(min(N_SEGMENTS, n_nodes)):
             rod.external_forces[:, seg_idx] += cable_forces[:, min(seg_idx, N_SEGMENTS - 1)]
 
+        # Capture forces BEFORE step() clears external_forces
+        f_before = rod.external_forces.copy()
+
         if HAS_ELASTICA:
             ea.integrate(ea.PositionVerlet(), env, dt, 1)
         else:
             rod.step(dt)
 
-        # Compute instantaneous power = |F . v|
+        # Compute instantaneous power = |F . v| using pre-step forces
         v = rod.velocity_collection
-        f = rod.external_forces
-        # Element-wise product summed over spatial dims
-        power = np.abs(np.sum(f * v[:, :f.shape[1]]))
+        power = np.abs(np.sum(f_before * v[:, :f_before.shape[1]]))
         total_work += power * dt
 
     state = extract_state(rod)
@@ -328,17 +334,20 @@ def set_state(rod, state: np.ndarray) -> None:
 def random_valid_state(seed: int | None = None) -> np.ndarray:
     """Generate a random physically plausible tentacle state.
 
-    Creates states by simulating from rest with random cable tensions
-    for a short duration, ensuring physical validity.
+    Creates states by simulating from rest with random cable tensions.
+    Uses 500 warmup steps with high-variance tensions to ensure the
+    tentacle reaches a significantly deformed posture.
     """
     rng = np.random.RandomState(seed)
 
     env, rod = make_tentacle()
 
-    # Apply random tensions for a few steps to get a non-trivial state
-    n_warmup = 50
+    # Apply random tensions to deform the tentacle substantially.
+    # 500 steps x dt=1e-4 = 0.05s physical time.
+    # Tension mean ~1.5 (30% of MAX) with high variance for diversity.
+    n_warmup = 500
     for _ in range(n_warmup):
-        tensions = rng.exponential(0.3, size=ACTION_DIM)
+        tensions = rng.exponential(1.5, size=ACTION_DIM)
         tensions = np.clip(tensions, 0.0, MAX_TENSION)
 
         cable_forces = compute_all_cable_forces(tensions)

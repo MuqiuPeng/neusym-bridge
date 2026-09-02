@@ -1,0 +1,1810 @@
+{
+  "PCC_EnergyOpt (lam=1.0)": [
+    {
+      "success": true,
+      "final_dist": 0.03420769132374365,
+      "tip_dist_m": 0.03446582311388303,
+      "energy": 12.040797095451943,
+      "steps": 3,
+      "progress_ratio": 0.9627282106599945,
+      "elapsed_s": 0.01666750000003958
+    },
+    {
+      "success": true,
+      "final_dist": 0.033237992035173795,
+      "tip_dist_m": 0.019880023065028316,
+      "energy": 15.48179267325404,
+      "steps": 3,
+      "progress_ratio": 0.9699727081430524,
+      "elapsed_s": 0.01651589999528369
+    },
+    {
+      "success": false,
+      "final_dist": 0.034200576942639734,
+      "tip_dist_m": 0.058350404216326535,
+      "energy": 10.395619731639755,
+      "steps": 3,
+      "progress_ratio": 0.959498393652456,
+      "elapsed_s": 0.017293899996730033
+    },
+    {
+      "success": false,
+      "final_dist": 0.033871133337689575,
+      "tip_dist_m": 0.05872078711934774,
+      "energy": 12.42764696277203,
+      "steps": 3,
+      "progress_ratio": 0.9642102872825578,
+      "elapsed_s": 0.01660260000062408
+    },
+    {
+      "success": true,
+      "final_dist": 0.03432502582478507,
+      "tip_dist_m": 0.0414391445427405,
+      "energy": 9.49914705119135,
+      "steps": 3,
+      "progress_ratio": 0.9577702955067957,
+      "elapsed_s": 0.016507699998328462
+    },
+    {
+      "success": false,
+      "final_dist": 0.03418150094852489,
+      "tip_dist_m": 0.05868075823320435,
+      "energy": 9.740952437360356,
+      "steps": 3,
+      "progress_ratio": 0.958793872345042,
+      "elapsed_s": 0.016385200004151557
+    },
+    {
+      "success": true,
+      "final_dist": 0.03488498781040788,
+      "tip_dist_m": 0.015749760448096582,
+      "energy": 10.177644378620194,
+      "steps": 3,
+      "progress_ratio": 0.9535139519732525,
+      "elapsed_s": 0.016321299997798633
+    },
+    {
+      "success": true,
+      "final_dist": 0.03521633935311546,
+      "tip_dist_m": 0.04257000090401759,
+      "energy": 8.099473061541138,
+      "steps": 3,
+      "progress_ratio": 0.9509096090131207,
+      "elapsed_s": 0.01598809999995865
+    },
+    {
+      "success": true,
+      "final_dist": 0.036233089219122855,
+      "tip_dist_m": 0.04040203609495549,
+      "energy": 13.939225924454306,
+      "steps": 3,
+      "progress_ratio": 0.9655955182185456,
+      "elapsed_s": 0.016804599996248726
+    },
+    {
+      "success": false,
+      "final_dist": 0.034431968314520285,
+      "tip_dist_m": 0.0761437839929433,
+      "energy": 9.865230222443063,
+      "steps": 3,
+      "progress_ratio": 0.9570319540395734,
+      "elapsed_s": 0.016468399997393135
+    },
+    {
+      "success": false,
+      "final_dist": 0.034867123872577066,
+      "tip_dist_m": 0.05910650283894479,
+      "energy": 8.186859259180956,
+      "steps": 3,
+      "progress_ratio": 0.9440027581625342,
+      "elapsed_s": 0.01608999999734806
+    },
+    {
+      "success": true,
+      "final_dist": 0.03331108278748397,
+      "tip_dist_m": 0.026673422640427543,
+      "energy": 16.38651816719588,
+      "steps": 3,
+      "progress_ratio": 0.9716782474207903,
+      "elapsed_s": 0.01664380000147503
+    },
+    {
+      "success": true,
+      "final_dist": 0.03534164834236127,
+      "tip_dist_m": 0.033752065955422926,
+      "energy": 7.506664730217555,
+      "steps": 3,
+      "progress_ratio": 0.9399847089391887,
+      "elapsed_s": 0.016030200000386685
+    },
+    {
+      "success": false,
+      "final_dist": 0.036528191194065716,
+      "tip_dist_m": 0.07709678226317271,
+      "energy": 11.424211114878117,
+      "steps": 3,
+      "progress_ratio": 0.9593190011833497,
+      "elapsed_s": 0.016170599999895785
+    },
+    {
+      "success": true,
+      "final_dist": 0.03443341458387313,
+      "tip_dist_m": 0.029208034579874254,
+      "energy": 10.291956158780767,
+      "steps": 3,
+      "progress_ratio": 0.9574234239992907,
+      "elapsed_s": 0.01603869999962626
+    },
+    {
+      "success": true,
+      "final_dist": 0.03415328489087637,
+      "tip_dist_m": 0.032294773083799584,
+      "energy": 11.789676244721594,
+      "steps": 3,
+      "progress_ratio": 0.9632984002810907,
+      "elapsed_s": 0.016196799995668698
+    },
+    {
+      "success": true,
+      "final_dist": 0.03423940921513552,
+      "tip_dist_m": 0.02904045135120837,
+      "energy": 8.084846181793596,
+      "steps": 3,
+      "progress_ratio": 0.9445631301318304,
+      "elapsed_s": 0.016279900002700742
+    },
+    {
+      "success": false,
+      "final_dist": 0.034540533981859425,
+      "tip_dist_m": 0.07896256648152016,
+      "energy": 8.40994473935637,
+      "steps": 3,
+      "progress_ratio": 0.9534832511037877,
+      "elapsed_s": 0.01623410000320291
+    },
+    {
+      "success": true,
+      "final_dist": 0.032681955018541396,
+      "tip_dist_m": 0.02354349486657855,
+      "energy": 18.233733647747474,
+      "steps": 3,
+      "progress_ratio": 0.9746350403229318,
+      "elapsed_s": 0.016439200000604615
+    },
+    {
+      "success": false,
+      "final_dist": 0.0343736218652463,
+      "tip_dist_m": 0.06819874553390559,
+      "energy": 9.67583107368369,
+      "steps": 3,
+      "progress_ratio": 0.9573840614945689,
+      "elapsed_s": 0.016719100000045728
+    },
+    {
+      "success": false,
+      "final_dist": 0.0335526606754196,
+      "tip_dist_m": 0.05716742978080157,
+      "energy": 15.007537358968591,
+      "steps": 3,
+      "progress_ratio": 0.9715145340241462,
+      "elapsed_s": 0.01627800000278512
+    },
+    {
+      "success": true,
+      "final_dist": 0.03628495217571086,
+      "tip_dist_m": 0.03574628186164911,
+      "energy": 12.300798316702043,
+      "steps": 3,
+      "progress_ratio": 0.9588865031170137,
+      "elapsed_s": 0.016485100000863895
+    },
+    {
+      "success": false,
+      "final_dist": 0.03355190617223749,
+      "tip_dist_m": 0.07770818660884116,
+      "energy": 14.061161432488099,
+      "steps": 3,
+      "progress_ratio": 0.9692731133224877,
+      "elapsed_s": 0.016406500006269198
+    },
+    {
+      "success": true,
+      "final_dist": 0.03377837404482184,
+      "tip_dist_m": 0.041504747576653345,
+      "energy": 12.613725653814996,
+      "steps": 3,
+      "progress_ratio": 0.965134964918442,
+      "elapsed_s": 0.01625870000134455
+    },
+    {
+      "success": false,
+      "final_dist": 0.03428336577528904,
+      "tip_dist_m": 0.08812577821683178,
+      "energy": 11.050588837441218,
+      "steps": 3,
+      "progress_ratio": 0.9595880396994017,
+      "elapsed_s": 0.01627300000109244
+    },
+    {
+      "success": true,
+      "final_dist": 0.03531177057047326,
+      "tip_dist_m": 0.021041583225286285,
+      "energy": 9.65661388490769,
+      "steps": 3,
+      "progress_ratio": 0.949956857876375,
+      "elapsed_s": 0.01662899999791989
+    },
+    {
+      "success": true,
+      "final_dist": 0.035121528679061556,
+      "tip_dist_m": 0.04909033011426025,
+      "energy": 8.442724274477893,
+      "steps": 3,
+      "progress_ratio": 0.9439220913320054,
+      "elapsed_s": 0.015847299997403752
+    },
+    {
+      "success": true,
+      "final_dist": 0.03356444121748402,
+      "tip_dist_m": 0.013709697341454271,
+      "energy": 13.121775236338873,
+      "steps": 3,
+      "progress_ratio": 0.9669339465053605,
+      "elapsed_s": 0.016390199998568278
+    },
+    {
+      "success": true,
+      "final_dist": 0.03657861618297821,
+      "tip_dist_m": 0.028582416310475287,
+      "energy": 12.675752320190421,
+      "steps": 3,
+      "progress_ratio": 0.9616948357132393,
+      "elapsed_s": 0.016378799999074545
+    },
+    {
+      "success": true,
+      "final_dist": 0.03441443580208339,
+      "tip_dist_m": 0.023204810611283298,
+      "energy": 9.60953385668796,
+      "steps": 3,
+      "progress_ratio": 0.9576229408893645,
+      "elapsed_s": 0.016286199999740347
+    },
+    {
+      "success": true,
+      "final_dist": 0.033550910691794486,
+      "tip_dist_m": 0.04577611130175458,
+      "energy": 12.47065432931262,
+      "steps": 3,
+      "progress_ratio": 0.9667919926099896,
+      "elapsed_s": 0.016340599999239203
+    },
+    {
+      "success": true,
+      "final_dist": 0.03447473049543602,
+      "tip_dist_m": 0.038667598432192495,
+      "energy": 11.39024540831534,
+      "steps": 3,
+      "progress_ratio": 0.9613251911939722,
+      "elapsed_s": 0.016221699996094685
+    },
+    {
+      "success": false,
+      "final_dist": 0.03480536006426047,
+      "tip_dist_m": 0.05474648696684883,
+      "energy": 8.353535292079528,
+      "steps": 3,
+      "progress_ratio": 0.9494132178092649,
+      "elapsed_s": 0.015826999995624647
+    },
+    {
+      "success": false,
+      "final_dist": 0.03383512298318187,
+      "tip_dist_m": 0.05164040360739081,
+      "energy": 12.936353423288427,
+      "steps": 3,
+      "progress_ratio": 0.9654278769295278,
+      "elapsed_s": 0.01583260000188602
+    },
+    {
+      "success": true,
+      "final_dist": 0.0346300281954231,
+      "tip_dist_m": 0.026739665281788456,
+      "energy": 8.512224480099094,
+      "steps": 3,
+      "progress_ratio": 0.9525529715653959,
+      "elapsed_s": 0.01643519999925047
+    },
+    {
+      "success": true,
+      "final_dist": 0.033784191539633954,
+      "tip_dist_m": 0.021654364670950037,
+      "energy": 12.930391769929603,
+      "steps": 3,
+      "progress_ratio": 0.966517551377226,
+      "elapsed_s": 0.01636750000034226
+    },
+    {
+      "success": true,
+      "final_dist": 0.03333078742851697,
+      "tip_dist_m": 0.04041724593405074,
+      "energy": 13.50759962122489,
+      "steps": 3,
+      "progress_ratio": 0.9692204178844194,
+      "elapsed_s": 0.016223000005993526
+    },
+    {
+      "success": true,
+      "final_dist": 0.033612727207369464,
+      "tip_dist_m": 0.03974119436501527,
+      "energy": 15.38861856075372,
+      "steps": 3,
+      "progress_ratio": 0.9710452599617119,
+      "elapsed_s": 0.01588570000603795
+    },
+    {
+      "success": false,
+      "final_dist": 0.03364985109810657,
+      "tip_dist_m": 0.06429156136366516,
+      "energy": 15.263694396407038,
+      "steps": 3,
+      "progress_ratio": 0.9711339900059119,
+      "elapsed_s": 0.01627889999508625
+    },
+    {
+      "success": false,
+      "final_dist": 0.03343383363585189,
+      "tip_dist_m": 0.06499919250414588,
+      "energy": 14.116286150034519,
+      "steps": 3,
+      "progress_ratio": 0.9679025749465567,
+      "elapsed_s": 0.01636970000254223
+    },
+    {
+      "success": true,
+      "final_dist": 0.03402094197887102,
+      "tip_dist_m": 0.021017219376423573,
+      "energy": 11.89764001567584,
+      "steps": 3,
+      "progress_ratio": 0.9620805112464385,
+      "elapsed_s": 0.015928800006804522
+    },
+    {
+      "success": true,
+      "final_dist": 0.034328773649148145,
+      "tip_dist_m": 0.03614779431305505,
+      "energy": 10.335191050364688,
+      "steps": 3,
+      "progress_ratio": 0.9579056769050622,
+      "elapsed_s": 0.016552499997487757
+    },
+    {
+      "success": true,
+      "final_dist": 0.03442351601804343,
+      "tip_dist_m": 0.04193785441869589,
+      "energy": 11.190535347345548,
+      "steps": 3,
+      "progress_ratio": 0.9624441172450148,
+      "elapsed_s": 0.01640420000330778
+    },
+    {
+      "success": true,
+      "final_dist": 0.034016896833443215,
+      "tip_dist_m": 0.032270302214604044,
+      "energy": 11.747053500168835,
+      "steps": 3,
+      "progress_ratio": 0.964058301483709,
+      "elapsed_s": 0.01714719999290537
+    },
+    {
+      "success": false,
+      "final_dist": 0.03320745982590266,
+      "tip_dist_m": 0.05892833926995974,
+      "energy": 15.687107096933461,
+      "steps": 3,
+      "progress_ratio": 0.9711727241205185,
+      "elapsed_s": 0.016762999999627937
+    },
+    {
+      "success": true,
+      "final_dist": 0.03507343239946116,
+      "tip_dist_m": 0.025034190297361876,
+      "energy": 5.52470028236187,
+      "steps": 3,
+      "progress_ratio": 0.9280991853769622,
+      "elapsed_s": 0.016269699997792486
+    },
+    {
+      "success": false,
+      "final_dist": 0.03600485954541455,
+      "tip_dist_m": 0.21037260154449097,
+      "energy": 9.940500499830105,
+      "steps": 3,
+      "progress_ratio": 0.9553568882780797,
+      "elapsed_s": 0.015668399995774962
+    },
+    {
+      "success": true,
+      "final_dist": 0.03648581886718692,
+      "tip_dist_m": 0.04729972131499339,
+      "energy": 9.410183004291888,
+      "steps": 3,
+      "progress_ratio": 0.9493864007407923,
+      "elapsed_s": 0.016162899999471847
+    },
+    {
+      "success": false,
+      "final_dist": 0.03503373894641807,
+      "tip_dist_m": 0.05556161754165836,
+      "energy": 9.07173547375736,
+      "steps": 3,
+      "progress_ratio": 0.95155710589323,
+      "elapsed_s": 0.015746400000352878
+    },
+    {
+      "success": false,
+      "final_dist": 0.034301399509526466,
+      "tip_dist_m": 0.06997505213541062,
+      "energy": 11.604937482757858,
+      "steps": 3,
+      "progress_ratio": 0.9628224011311369,
+      "elapsed_s": 0.01606980000360636
+    }
+  ],
+  "PCC_EnergyOpt (lam=0.5)": [
+    {
+      "success": true,
+      "final_dist": 0.03420769132374365,
+      "tip_dist_m": 0.03446582311388303,
+      "energy": 12.040797095451943,
+      "steps": 3,
+      "progress_ratio": 0.9627282106599945,
+      "elapsed_s": 0.01648629999544937
+    },
+    {
+      "success": true,
+      "final_dist": 0.033237992035173795,
+      "tip_dist_m": 0.019880023065028316,
+      "energy": 15.48179267325404,
+      "steps": 3,
+      "progress_ratio": 0.9699727081430524,
+      "elapsed_s": 0.016366100004233886
+    },
+    {
+      "success": false,
+      "final_dist": 0.034200576942639734,
+      "tip_dist_m": 0.058350404216326535,
+      "energy": 10.395619731639755,
+      "steps": 3,
+      "progress_ratio": 0.959498393652456,
+      "elapsed_s": 0.01637230000051204
+    },
+    {
+      "success": false,
+      "final_dist": 0.033871133337689575,
+      "tip_dist_m": 0.05872078711934774,
+      "energy": 12.42764696277203,
+      "steps": 3,
+      "progress_ratio": 0.9642102872825578,
+      "elapsed_s": 0.016214699993724935
+    },
+    {
+      "success": true,
+      "final_dist": 0.03432502582478507,
+      "tip_dist_m": 0.0414391445427405,
+      "energy": 9.49914705119135,
+      "steps": 3,
+      "progress_ratio": 0.9577702955067957,
+      "elapsed_s": 0.01621819999854779
+    },
+    {
+      "success": false,
+      "final_dist": 0.03418150094852489,
+      "tip_dist_m": 0.05868075823320435,
+      "energy": 9.740952437360356,
+      "steps": 3,
+      "progress_ratio": 0.958793872345042,
+      "elapsed_s": 0.016288800004986115
+    },
+    {
+      "success": true,
+      "final_dist": 0.03488498781040788,
+      "tip_dist_m": 0.015749760448096582,
+      "energy": 10.177644378620194,
+      "steps": 3,
+      "progress_ratio": 0.9535139519732525,
+      "elapsed_s": 0.02137419999780832
+    },
+    {
+      "success": true,
+      "final_dist": 0.03521633935311546,
+      "tip_dist_m": 0.04257000090401759,
+      "energy": 8.099473061541138,
+      "steps": 3,
+      "progress_ratio": 0.9509096090131207,
+      "elapsed_s": 0.015976200003933627
+    },
+    {
+      "success": true,
+      "final_dist": 0.03336533729551139,
+      "tip_dist_m": 0.045596803519389655,
+      "energy": 13.607298390479015,
+      "steps": 3,
+      "progress_ratio": 0.9683185407632959,
+      "elapsed_s": 0.01734769999893615
+    },
+    {
+      "success": false,
+      "final_dist": 0.034431968314520285,
+      "tip_dist_m": 0.0761437839929433,
+      "energy": 9.865230222443063,
+      "steps": 3,
+      "progress_ratio": 0.9570319540395734,
+      "elapsed_s": 0.021512599996640347
+    },
+    {
+      "success": false,
+      "final_dist": 0.034867123872577066,
+      "tip_dist_m": 0.05910650283894479,
+      "energy": 8.186859259180956,
+      "steps": 3,
+      "progress_ratio": 0.9440027581625342,
+      "elapsed_s": 0.016223900005570613
+    },
+    {
+      "success": true,
+      "final_dist": 0.03331108278748397,
+      "tip_dist_m": 0.026673422640427543,
+      "energy": 16.38651816719588,
+      "steps": 3,
+      "progress_ratio": 0.9716782474207903,
+      "elapsed_s": 0.01623259999905713
+    },
+    {
+      "success": true,
+      "final_dist": 0.03534164834236127,
+      "tip_dist_m": 0.033752065955422926,
+      "energy": 7.506664730217555,
+      "steps": 3,
+      "progress_ratio": 0.9399847089391887,
+      "elapsed_s": 0.016077600004791748
+    },
+    {
+      "success": false,
+      "final_dist": 0.034218500697360286,
+      "tip_dist_m": 0.07420266595753944,
+      "energy": 11.107488783920155,
+      "steps": 3,
+      "progress_ratio": 0.9618912751802775,
+      "elapsed_s": 0.016306600002280902
+    },
+    {
+      "success": true,
+      "final_dist": 0.03443341458387313,
+      "tip_dist_m": 0.029208034579874254,
+      "energy": 10.291956158780767,
+      "steps": 3,
+      "progress_ratio": 0.9574234239992907,
+      "elapsed_s": 0.015904599997156765
+    },
+    {
+      "success": true,
+      "final_dist": 0.03415328489087637,
+      "tip_dist_m": 0.032294773083799584,
+      "energy": 11.789676244721594,
+      "steps": 3,
+      "progress_ratio": 0.9632984002810907,
+      "elapsed_s": 0.016134999998030253
+    },
+    {
+      "success": true,
+      "final_dist": 0.03423940921513552,
+      "tip_dist_m": 0.02904045135120837,
+      "energy": 8.084846181793596,
+      "steps": 3,
+      "progress_ratio": 0.9445631301318304,
+      "elapsed_s": 0.01621799999702489
+    },
+    {
+      "success": false,
+      "final_dist": 0.034540533981859425,
+      "tip_dist_m": 0.07896256648152016,
+      "energy": 8.40994473935637,
+      "steps": 3,
+      "progress_ratio": 0.9534832511037877,
+      "elapsed_s": 0.016487900000356603
+    },
+    {
+      "success": true,
+      "final_dist": 0.032681955018541396,
+      "tip_dist_m": 0.02354349486657855,
+      "energy": 18.233733647747474,
+      "steps": 3,
+      "progress_ratio": 0.9746350403229318,
+      "elapsed_s": 0.01635800000076415
+    },
+    {
+      "success": false,
+      "final_dist": 0.0343736218652463,
+      "tip_dist_m": 0.06819874553390559,
+      "energy": 9.67583107368369,
+      "steps": 3,
+      "progress_ratio": 0.9573840614945689,
+      "elapsed_s": 0.016260600001260173
+    },
+    {
+      "success": false,
+      "final_dist": 0.0335526606754196,
+      "tip_dist_m": 0.05716742978080157,
+      "energy": 15.007537358968591,
+      "steps": 3,
+      "progress_ratio": 0.9715145340241462,
+      "elapsed_s": 0.01635600000008708
+    },
+    {
+      "success": true,
+      "final_dist": 0.03400563906063002,
+      "tip_dist_m": 0.03475667943670417,
+      "energy": 11.978776340463513,
+      "steps": 3,
+      "progress_ratio": 0.9614691310945409,
+      "elapsed_s": 0.016961599998467136
+    },
+    {
+      "success": false,
+      "final_dist": 0.03355190617223749,
+      "tip_dist_m": 0.07770818660884116,
+      "energy": 14.061161432488099,
+      "steps": 3,
+      "progress_ratio": 0.9692731133224877,
+      "elapsed_s": 0.016286300000501797
+    },
+    {
+      "success": true,
+      "final_dist": 0.03377837404482184,
+      "tip_dist_m": 0.041504747576653345,
+      "energy": 12.613725653814996,
+      "steps": 3,
+      "progress_ratio": 0.965134964918442,
+      "elapsed_s": 0.016514099996129517
+    },
+    {
+      "success": false,
+      "final_dist": 0.03428336577528904,
+      "tip_dist_m": 0.08812577821683178,
+      "energy": 11.050588837441218,
+      "steps": 3,
+      "progress_ratio": 0.9595880396994017,
+      "elapsed_s": 0.016266999999061227
+    },
+    {
+      "success": true,
+      "final_dist": 0.03531177057047326,
+      "tip_dist_m": 0.021041583225286285,
+      "energy": 9.65661388490769,
+      "steps": 3,
+      "progress_ratio": 0.949956857876375,
+      "elapsed_s": 0.016852699998707976
+    },
+    {
+      "success": true,
+      "final_dist": 0.035121528679061556,
+      "tip_dist_m": 0.04909033011426025,
+      "energy": 8.442724274477893,
+      "steps": 3,
+      "progress_ratio": 0.9439220913320054,
+      "elapsed_s": 0.015648100001271814
+    },
+    {
+      "success": true,
+      "final_dist": 0.03356444121748402,
+      "tip_dist_m": 0.013709697341454271,
+      "energy": 13.121775236338873,
+      "steps": 3,
+      "progress_ratio": 0.9669339465053605,
+      "elapsed_s": 0.01630930000101216
+    },
+    {
+      "success": true,
+      "final_dist": 0.03375667086237962,
+      "tip_dist_m": 0.02986084306913372,
+      "energy": 12.351463457998182,
+      "steps": 3,
+      "progress_ratio": 0.9646499797398219,
+      "elapsed_s": 0.016270300002361182
+    },
+    {
+      "success": true,
+      "final_dist": 0.03441443580208339,
+      "tip_dist_m": 0.023204810611283298,
+      "energy": 9.60953385668796,
+      "steps": 3,
+      "progress_ratio": 0.9576229408893645,
+      "elapsed_s": 0.016312799998559058
+    },
+    {
+      "success": true,
+      "final_dist": 0.033550910691794486,
+      "tip_dist_m": 0.04577611130175458,
+      "energy": 12.47065432931262,
+      "steps": 3,
+      "progress_ratio": 0.9667919926099896,
+      "elapsed_s": 0.016284099998301826
+    },
+    {
+      "success": true,
+      "final_dist": 0.03447473049543602,
+      "tip_dist_m": 0.038667598432192495,
+      "energy": 11.39024540831534,
+      "steps": 3,
+      "progress_ratio": 0.9613251911939722,
+      "elapsed_s": 0.01657639999757521
+    },
+    {
+      "success": false,
+      "final_dist": 0.03480536006426047,
+      "tip_dist_m": 0.05474648696684883,
+      "energy": 8.353535292079528,
+      "steps": 3,
+      "progress_ratio": 0.9494132178092649,
+      "elapsed_s": 0.015669100001105107
+    },
+    {
+      "success": false,
+      "final_dist": 0.03383512298318187,
+      "tip_dist_m": 0.05164040360739081,
+      "energy": 12.936353423288427,
+      "steps": 3,
+      "progress_ratio": 0.9654278769295278,
+      "elapsed_s": 0.015727199999673758
+    },
+    {
+      "success": true,
+      "final_dist": 0.0346300281954231,
+      "tip_dist_m": 0.026739665281788456,
+      "energy": 8.512224480099094,
+      "steps": 3,
+      "progress_ratio": 0.9525529715653959,
+      "elapsed_s": 0.016661800000292715
+    },
+    {
+      "success": true,
+      "final_dist": 0.033784191539633954,
+      "tip_dist_m": 0.021654364670950037,
+      "energy": 12.930391769929603,
+      "steps": 3,
+      "progress_ratio": 0.966517551377226,
+      "elapsed_s": 0.01716370000212919
+    },
+    {
+      "success": true,
+      "final_dist": 0.03333078742851697,
+      "tip_dist_m": 0.04041724593405074,
+      "energy": 13.50759962122489,
+      "steps": 3,
+      "progress_ratio": 0.9692204178844194,
+      "elapsed_s": 0.016651400001137517
+    },
+    {
+      "success": true,
+      "final_dist": 0.033612727207369464,
+      "tip_dist_m": 0.03974119436501527,
+      "energy": 15.38861856075372,
+      "steps": 3,
+      "progress_ratio": 0.9710452599617119,
+      "elapsed_s": 0.01578200000221841
+    },
+    {
+      "success": false,
+      "final_dist": 0.03364985109810657,
+      "tip_dist_m": 0.06429156136366516,
+      "energy": 15.263694396407038,
+      "steps": 3,
+      "progress_ratio": 0.9711339900059119,
+      "elapsed_s": 0.01849509999738075
+    },
+    {
+      "success": false,
+      "final_dist": 0.03343383363585189,
+      "tip_dist_m": 0.06499919250414588,
+      "energy": 14.116286150034519,
+      "steps": 3,
+      "progress_ratio": 0.9679025749465567,
+      "elapsed_s": 0.020858099996985402
+    },
+    {
+      "success": true,
+      "final_dist": 0.03402094197887102,
+      "tip_dist_m": 0.021017219376423573,
+      "energy": 11.89764001567584,
+      "steps": 3,
+      "progress_ratio": 0.9620805112464385,
+      "elapsed_s": 0.01602679999632528
+    },
+    {
+      "success": true,
+      "final_dist": 0.034328773649148145,
+      "tip_dist_m": 0.03614779431305505,
+      "energy": 10.335191050364688,
+      "steps": 3,
+      "progress_ratio": 0.9579056769050622,
+      "elapsed_s": 0.0164604999954463
+    },
+    {
+      "success": true,
+      "final_dist": 0.03442351601804343,
+      "tip_dist_m": 0.04193785441869589,
+      "energy": 11.190535347345548,
+      "steps": 3,
+      "progress_ratio": 0.9624441172450148,
+      "elapsed_s": 0.01686380000319332
+    },
+    {
+      "success": true,
+      "final_dist": 0.034016896833443215,
+      "tip_dist_m": 0.032270302214604044,
+      "energy": 11.747053500168835,
+      "steps": 3,
+      "progress_ratio": 0.964058301483709,
+      "elapsed_s": 0.016488000001118053
+    },
+    {
+      "success": false,
+      "final_dist": 0.03320745982590266,
+      "tip_dist_m": 0.05892833926995974,
+      "energy": 15.687107096933461,
+      "steps": 3,
+      "progress_ratio": 0.9711727241205185,
+      "elapsed_s": 0.016745900000387337
+    },
+    {
+      "success": true,
+      "final_dist": 0.03507343239946116,
+      "tip_dist_m": 0.025034190297361876,
+      "energy": 5.52470028236187,
+      "steps": 3,
+      "progress_ratio": 0.9280991853769622,
+      "elapsed_s": 0.017334000003756955
+    },
+    {
+      "success": false,
+      "final_dist": 0.03600485954541455,
+      "tip_dist_m": 0.21037260154449097,
+      "energy": 9.940500499830105,
+      "steps": 3,
+      "progress_ratio": 0.9553568882780797,
+      "elapsed_s": 0.015906599997833837
+    },
+    {
+      "success": true,
+      "final_dist": 0.03648581886718692,
+      "tip_dist_m": 0.04729972131499339,
+      "energy": 9.410183004291888,
+      "steps": 3,
+      "progress_ratio": 0.9493864007407923,
+      "elapsed_s": 0.016311799998220522
+    },
+    {
+      "success": false,
+      "final_dist": 0.03503373894641807,
+      "tip_dist_m": 0.05556161754165836,
+      "energy": 9.07173547375736,
+      "steps": 3,
+      "progress_ratio": 0.95155710589323,
+      "elapsed_s": 0.015917900003842078
+    },
+    {
+      "success": false,
+      "final_dist": 0.034301399509526466,
+      "tip_dist_m": 0.06997505213541062,
+      "energy": 11.604937482757858,
+      "steps": 3,
+      "progress_ratio": 0.9628224011311369,
+      "elapsed_s": 0.01598809999995865
+    }
+  ],
+  "PCC_Greedy": [
+    {
+      "success": false,
+      "final_dist": 0.047866389085272396,
+      "tip_dist_m": 0.09953801613445667,
+      "energy": 41.535404407394495,
+      "steps": 10,
+      "progress_ratio": 0.9478460573802393,
+      "elapsed_s": 0.06443929999659304
+    },
+    {
+      "success": false,
+      "final_dist": 0.03648305408392641,
+      "tip_dist_m": 0.09256203814443531,
+      "energy": 61.277517424842685,
+      "steps": 11,
+      "progress_ratio": 0.9670411103158225,
+      "elapsed_s": 0.07169340000109514
+    },
+    {
+      "success": true,
+      "final_dist": 0.03919258363417637,
+      "tip_dist_m": 0.01741007593774655,
+      "energy": 35.7782937808723,
+      "steps": 10,
+      "progress_ratio": 0.9535866720389867,
+      "elapsed_s": 0.06345629999850644
+    },
+    {
+      "success": false,
+      "final_dist": 0.043130269373446335,
+      "tip_dist_m": 0.06745649952140984,
+      "energy": 42.88914141533415,
+      "steps": 10,
+      "progress_ratio": 0.9544266814188971,
+      "elapsed_s": 0.062496699996700045
+    },
+    {
+      "success": false,
+      "final_dist": 0.035965626067112885,
+      "tip_dist_m": 0.05894923612984487,
+      "energy": 32.64118983784386,
+      "steps": 10,
+      "progress_ratio": 0.9557518829416125,
+      "elapsed_s": 0.06221699999878183
+    },
+    {
+      "success": false,
+      "final_dist": 0.03555118446493381,
+      "tip_dist_m": 0.05533468409701309,
+      "energy": 33.48736021976435,
+      "steps": 10,
+      "progress_ratio": 0.9571427057122767,
+      "elapsed_s": 0.06238739999389509
+    },
+    {
+      "success": false,
+      "final_dist": 0.04137747138721491,
+      "tip_dist_m": 0.13353963743341268,
+      "energy": 35.01551388321981,
+      "steps": 10,
+      "progress_ratio": 0.9448623822778698,
+      "elapsed_s": 0.06238440000015544
+    },
+    {
+      "success": false,
+      "final_dist": 0.04979904337351239,
+      "tip_dist_m": 0.10805353156316826,
+      "energy": 23.736392561147763,
+      "steps": 9,
+      "progress_ratio": 0.93058181074797,
+      "elapsed_s": 0.0563551999948686
+    },
+    {
+      "success": true,
+      "final_dist": 0.04620335354583045,
+      "tip_dist_m": 0.048090348839173215,
+      "energy": 47.01719710065371,
+      "steps": 10,
+      "progress_ratio": 0.9561284320611925,
+      "elapsed_s": 0.06272110000281828
+    },
+    {
+      "success": false,
+      "final_dist": 0.039126834152206476,
+      "tip_dist_m": 0.06963117488304665,
+      "energy": 33.92225616039556,
+      "steps": 10,
+      "progress_ratio": 0.9511731774152158,
+      "elapsed_s": 0.06261559999984456
+    },
+    {
+      "success": false,
+      "final_dist": 0.03544761308507015,
+      "tip_dist_m": 0.11350363391649398,
+      "energy": 28.04898831682849,
+      "steps": 10,
+      "progress_ratio": 0.9430704818172065,
+      "elapsed_s": 0.06252060000406345
+    },
+    {
+      "success": false,
+      "final_dist": 0.038974680263666295,
+      "tip_dist_m": 0.1321184400016827,
+      "energy": 64.89855692596016,
+      "steps": 11,
+      "progress_ratio": 0.9668629429333319,
+      "elapsed_s": 0.06938700000318931
+    },
+    {
+      "success": false,
+      "final_dist": 0.046219026892127674,
+      "tip_dist_m": 0.2297335985018952,
+      "energy": 21.832874085229616,
+      "steps": 9,
+      "progress_ratio": 0.9215133282803419,
+      "elapsed_s": 0.05567799999698764
+    },
+    {
+      "success": false,
+      "final_dist": 0.04311921112571779,
+      "tip_dist_m": 0.1184217341083369,
+      "energy": 38.26939837282901,
+      "steps": 10,
+      "progress_ratio": 0.9519786630698212,
+      "elapsed_s": 0.06256700000085402
+    },
+    {
+      "success": false,
+      "final_dist": 0.04002132803887941,
+      "tip_dist_m": 0.11260165479526359,
+      "energy": 35.37789940293476,
+      "steps": 10,
+      "progress_ratio": 0.9505140243717008,
+      "elapsed_s": 0.06261520000407472
+    },
+    {
+      "success": false,
+      "final_dist": 0.0458480441816622,
+      "tip_dist_m": 0.2304045559186936,
+      "energy": 40.65663561924939,
+      "steps": 10,
+      "progress_ratio": 0.950731047662717,
+      "elapsed_s": 0.06258019999950193
+    },
+    {
+      "success": false,
+      "final_dist": 0.039400141688335874,
+      "tip_dist_m": 0.07539032152504285,
+      "energy": 23.761341016201172,
+      "steps": 9,
+      "progress_ratio": 0.9362074119375229,
+      "elapsed_s": 0.06272560000070371
+    },
+    {
+      "success": true,
+      "final_dist": 0.04685187336291485,
+      "tip_dist_m": 0.037548287403289624,
+      "energy": 24.737506472137134,
+      "steps": 9,
+      "progress_ratio": 0.9369032097278966,
+      "elapsed_s": 0.05557539999426808
+    },
+    {
+      "success": true,
+      "final_dist": 0.040218111346654074,
+      "tip_dist_m": 0.03988445516905841,
+      "energy": 72.29178312212946,
+      "steps": 11,
+      "progress_ratio": 0.9687861153955762,
+      "elapsed_s": 0.0691819999992731
+    },
+    {
+      "success": false,
+      "final_dist": 0.037456065989966626,
+      "tip_dist_m": 0.09521535852664506,
+      "energy": 33.25947543172678,
+      "steps": 10,
+      "progress_ratio": 0.953562490122763,
+      "elapsed_s": 0.06277720000070985
+    },
+    {
+      "success": false,
+      "final_dist": 0.036359926412483076,
+      "tip_dist_m": 0.08701316262968484,
+      "energy": 59.379375681140594,
+      "steps": 11,
+      "progress_ratio": 0.9691312275730759,
+      "elapsed_s": 0.06939030000648927
+    },
+    {
+      "success": false,
+      "final_dist": 0.04518155806486727,
+      "tip_dist_m": 0.08972530989481395,
+      "energy": 41.318369845977095,
+      "steps": 10,
+      "progress_ratio": 0.9488059998626142,
+      "elapsed_s": 0.06260530000145081
+    },
+    {
+      "success": false,
+      "final_dist": 0.048279794965877545,
+      "tip_dist_m": 0.17255532447152866,
+      "energy": 48.60543907359304,
+      "steps": 10,
+      "progress_ratio": 0.9557852903762124,
+      "elapsed_s": 0.0633732999995118
+    },
+    {
+      "success": true,
+      "final_dist": 0.04584150710718799,
+      "tip_dist_m": 0.042208155044026356,
+      "energy": 43.54030258077255,
+      "steps": 10,
+      "progress_ratio": 0.9526837570286006,
+      "elapsed_s": 0.06398749999789288
+    },
+    {
+      "success": false,
+      "final_dist": 0.043580041600656344,
+      "tip_dist_m": 0.2178493560538808,
+      "energy": 38.07028349699376,
+      "steps": 10,
+      "progress_ratio": 0.9486294629702442,
+      "elapsed_s": 0.06283619999885559
+    },
+    {
+      "success": false,
+      "final_dist": 0.042298089421266755,
+      "tip_dist_m": 0.10199120283179959,
+      "energy": 33.19222707045718,
+      "steps": 10,
+      "progress_ratio": 0.9400559851213974,
+      "elapsed_s": 0.06242290000227513
+    },
+    {
+      "success": false,
+      "final_dist": 0.03738906891904467,
+      "tip_dist_m": 0.11643666145092958,
+      "energy": 28.876865393933414,
+      "steps": 10,
+      "progress_ratio": 0.940301550903918,
+      "elapsed_s": 0.06260150000161957
+    },
+    {
+      "success": false,
+      "final_dist": 0.045994606122543316,
+      "tip_dist_m": 0.17556446813447216,
+      "energy": 45.318164174716934,
+      "steps": 10,
+      "progress_ratio": 0.9546883531694053,
+      "elapsed_s": 0.0627232000042568
+    },
+    {
+      "success": true,
+      "final_dist": 0.042571630960758555,
+      "tip_dist_m": 0.03727312294414117,
+      "energy": 42.622545925664326,
+      "steps": 10,
+      "progress_ratio": 0.9554189445070901,
+      "elapsed_s": 0.06242599999677623
+    },
+    {
+      "success": false,
+      "final_dist": 0.03758678950149297,
+      "tip_dist_m": 0.15004888713581246,
+      "energy": 33.027475879052076,
+      "steps": 10,
+      "progress_ratio": 0.953716585399103,
+      "elapsed_s": 0.06282649999775458
+    },
+    {
+      "success": true,
+      "final_dist": 0.04243652388515413,
+      "tip_dist_m": 0.039856875257928664,
+      "energy": 43.03964079149614,
+      "steps": 10,
+      "progress_ratio": 0.9579971938249293,
+      "elapsed_s": 0.06342210000002524
+    },
+    {
+      "success": false,
+      "final_dist": 0.045530228392194415,
+      "tip_dist_m": 0.1310223032248153,
+      "energy": 39.25887294428373,
+      "steps": 10,
+      "progress_ratio": 0.9489227949672874,
+      "elapsed_s": 0.06443350000336068
+    },
+    {
+      "success": true,
+      "final_dist": 0.0351566429384418,
+      "tip_dist_m": 0.008230180964079237,
+      "energy": 28.612878839958547,
+      "steps": 10,
+      "progress_ratio": 0.9489026564988594,
+      "elapsed_s": 0.06250600000203121
+    },
+    {
+      "success": false,
+      "final_dist": 0.047282962656386755,
+      "tip_dist_m": 0.10076291003046586,
+      "energy": 44.62935948221282,
+      "steps": 10,
+      "progress_ratio": 0.951687115045934,
+      "elapsed_s": 0.06252800000220304
+    },
+    {
+      "success": false,
+      "final_dist": 0.0457618465714142,
+      "tip_dist_m": 0.06667311875902106,
+      "energy": 25.044619338166562,
+      "steps": 9,
+      "progress_ratio": 0.9373011300123386,
+      "elapsed_s": 0.0557732000015676
+    },
+    {
+      "success": false,
+      "final_dist": 0.046835524430983586,
+      "tip_dist_m": 0.19548826675095127,
+      "energy": 44.6484395526541,
+      "steps": 10,
+      "progress_ratio": 0.9535827862377174,
+      "elapsed_s": 0.06392580000101589
+    },
+    {
+      "success": true,
+      "final_dist": 0.04527903908996058,
+      "tip_dist_m": 0.04607688098321269,
+      "energy": 46.6683126237885,
+      "steps": 10,
+      "progress_ratio": 0.9581867093667388,
+      "elapsed_s": 0.06259860000136541
+    },
+    {
+      "success": true,
+      "final_dist": 0.03774683326493848,
+      "tip_dist_m": 0.02319370484540345,
+      "energy": 60.7571986273092,
+      "steps": 11,
+      "progress_ratio": 0.9674840503803191,
+      "elapsed_s": 0.06957830000465037
+    },
+    {
+      "success": true,
+      "final_dist": 0.036799953373683095,
+      "tip_dist_m": 0.007485509901579078,
+      "energy": 60.404609033427974,
+      "steps": 11,
+      "progress_ratio": 0.9684317229586052,
+      "elapsed_s": 0.07030059999669902
+    },
+    {
+      "success": false,
+      "final_dist": 0.04966152875934242,
+      "tip_dist_m": 0.09489963226238181,
+      "energy": 48.79834173816359,
+      "steps": 10,
+      "progress_ratio": 0.9523235290707698,
+      "elapsed_s": 0.0636882999970112
+    },
+    {
+      "success": false,
+      "final_dist": 0.042982562944087574,
+      "tip_dist_m": 0.1896188375694348,
+      "energy": 40.9621142160257,
+      "steps": 10,
+      "progress_ratio": 0.9520919552089466,
+      "elapsed_s": 0.0634524999986752
+    },
+    {
+      "success": false,
+      "final_dist": 0.04037501639468184,
+      "tip_dist_m": 0.0836868717776719,
+      "energy": 35.56683049991074,
+      "steps": 10,
+      "progress_ratio": 0.9504917069729545,
+      "elapsed_s": 0.064555000004475
+    },
+    {
+      "success": false,
+      "final_dist": 0.04117202859024878,
+      "tip_dist_m": 0.07796345474228465,
+      "energy": 38.5600103538282,
+      "steps": 10,
+      "progress_ratio": 0.9550815239875613,
+      "elapsed_s": 0.0645033999971929
+    },
+    {
+      "success": false,
+      "final_dist": 0.044103110436976754,
+      "tip_dist_m": 0.06373288933878636,
+      "energy": 40.50748218388506,
+      "steps": 10,
+      "progress_ratio": 0.9534013726555416,
+      "elapsed_s": 0.0627055000004475
+    },
+    {
+      "success": false,
+      "final_dist": 0.038653133189294385,
+      "tip_dist_m": 0.08203336856091084,
+      "energy": 62.099260200160295,
+      "steps": 11,
+      "progress_ratio": 0.9664453547517363,
+      "elapsed_s": 0.06904280000162544
+    },
+    {
+      "success": false,
+      "final_dist": 0.04889233453655685,
+      "tip_dist_m": 0.15781809493394608,
+      "energy": 13.462960873994255,
+      "steps": 8,
+      "progress_ratio": 0.8997703263837238,
+      "elapsed_s": 0.051639999997860286
+    },
+    {
+      "success": false,
+      "final_dist": 0.04958307683552865,
+      "tip_dist_m": 0.0811964110952447,
+      "energy": 29.28613302276189,
+      "steps": 9,
+      "progress_ratio": 0.9385209978143917,
+      "elapsed_s": 0.05625210000289371
+    },
+    {
+      "success": true,
+      "final_dist": 0.04545398756626607,
+      "tip_dist_m": 0.04540732181514982,
+      "energy": 27.74089734921552,
+      "steps": 9,
+      "progress_ratio": 0.9369456412699289,
+      "elapsed_s": 0.05611230000067735
+    },
+    {
+      "success": false,
+      "final_dist": 0.040402357989008986,
+      "tip_dist_m": 0.1327153398515631,
+      "energy": 31.074438148386925,
+      "steps": 10,
+      "progress_ratio": 0.9441336492025928,
+      "elapsed_s": 0.06346649999613874
+    },
+    {
+      "success": false,
+      "final_dist": 0.03918925882406707,
+      "tip_dist_m": 0.06531347709851273,
+      "energy": 39.81247573931294,
+      "steps": 10,
+      "progress_ratio": 0.9575246909641522,
+      "elapsed_s": 0.06299339999532094
+    }
+  ],
+  "PCC_Random": [
+    {
+      "success": false,
+      "final_dist": 1.040822621217943,
+      "tip_dist_m": 1.0594422540856019,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.13405260563202614,
+      "elapsed_s": 0.14383890000317479
+    },
+    {
+      "success": false,
+      "final_dist": 0.7634202217894519,
+      "tip_dist_m": 1.130382912913432,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.3103241078790485,
+      "elapsed_s": 0.13322389999666484
+    },
+    {
+      "success": false,
+      "final_dist": 1.2602823990310403,
+      "tip_dist_m": 0.792585212151012,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.4924737000168802,
+      "elapsed_s": 0.13489929999923334
+    },
+    {
+      "success": false,
+      "final_dist": 0.9499590463350759,
+      "tip_dist_m": 0.9020587663413396,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.003768047047785883,
+      "elapsed_s": 0.13193040000624023
+    },
+    {
+      "success": false,
+      "final_dist": 1.0829457354991896,
+      "tip_dist_m": 0.2746487270723525,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.33233631420269893,
+      "elapsed_s": 0.13204620000033174
+    },
+    {
+      "success": false,
+      "final_dist": 1.0825537400097918,
+      "tip_dist_m": 0.24498431553449748,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.30502892986976415,
+      "elapsed_s": 0.132352799999353
+    },
+    {
+      "success": false,
+      "final_dist": 1.2205611331079098,
+      "tip_dist_m": 1.2198923340171188,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.6264607504408433,
+      "elapsed_s": 0.13304819999757456
+    },
+    {
+      "success": false,
+      "final_dist": 1.2391346518294357,
+      "tip_dist_m": 0.8271468034753798,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.7273119711210445,
+      "elapsed_s": 0.1319020000009914
+    },
+    {
+      "success": false,
+      "final_dist": 1.0762674709034756,
+      "tip_dist_m": 0.7443566096974463,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.021950526236886203,
+      "elapsed_s": 0.13230379999731667
+    },
+    {
+      "success": false,
+      "final_dist": 1.0561902600742403,
+      "tip_dist_m": 1.02344012165949,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.318031871523494,
+      "elapsed_s": 0.13247490000503603
+    },
+    {
+      "success": false,
+      "final_dist": 1.1931497374840139,
+      "tip_dist_m": 1.300745843687498,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.9162204098729656,
+      "elapsed_s": 0.13245450000249548
+    },
+    {
+      "success": false,
+      "final_dist": 0.7711038827437404,
+      "tip_dist_m": 1.3275584694681426,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.344391969505665,
+      "elapsed_s": 0.13202740000269841
+    },
+    {
+      "success": false,
+      "final_dist": 1.352901543487104,
+      "tip_dist_m": 1.2026715925761653,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -1.297424815120395,
+      "elapsed_s": 0.13238330000604037
+    },
+    {
+      "success": false,
+      "final_dist": 1.2402294318250637,
+      "tip_dist_m": 0.8959873894077024,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.38122831706616056,
+      "elapsed_s": 0.13830370000505354
+    },
+    {
+      "success": false,
+      "final_dist": 1.2785900707267792,
+      "tip_dist_m": 1.2139012109664047,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.5809639554465487,
+      "elapsed_s": 0.13170140000147512
+    },
+    {
+      "success": false,
+      "final_dist": 1.158201022741622,
+      "tip_dist_m": 1.4243434478380077,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.24461908910114372,
+      "elapsed_s": 0.1317267000049469
+    },
+    {
+      "success": false,
+      "final_dist": 1.3133545994798117,
+      "tip_dist_m": 0.9025976933266042,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -1.1264463871047035,
+      "elapsed_s": 0.13181790000089677
+    },
+    {
+      "success": false,
+      "final_dist": 1.19187614839118,
+      "tip_dist_m": 0.7158385720240386,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.6051345222171487,
+      "elapsed_s": 0.13214159999915864
+    },
+    {
+      "success": false,
+      "final_dist": 0.7682558977950802,
+      "tip_dist_m": 1.1850673806825611,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.4037449761439731,
+      "elapsed_s": 0.13288660000398522
+    },
+    {
+      "success": false,
+      "final_dist": 1.1980000001762252,
+      "tip_dist_m": 0.38707570011625264,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.4852637448902317,
+      "elapsed_s": 0.13160480000078678
+    },
+    {
+      "success": false,
+      "final_dist": 1.062509648154807,
+      "tip_dist_m": 0.7961577603581307,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.09795283526642184,
+      "elapsed_s": 0.1340448999981163
+    },
+    {
+      "success": false,
+      "final_dist": 1.2581830209843485,
+      "tip_dist_m": 1.1484390283479118,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.42561311534794055,
+      "elapsed_s": 0.13155359999655047
+    },
+    {
+      "success": false,
+      "final_dist": 0.8037182062117818,
+      "tip_dist_m": 1.061500279405101,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.2639536449539376,
+      "elapsed_s": 0.13212819999898784
+    },
+    {
+      "success": false,
+      "final_dist": 0.9465875728804507,
+      "tip_dist_m": 0.4774154388663334,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.02296040382372866,
+      "elapsed_s": 0.13242539999919245
+    },
+    {
+      "success": false,
+      "final_dist": 1.0797707428883665,
+      "tip_dist_m": 1.3940803992395119,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.2727937123024322,
+      "elapsed_s": 0.13339690000429982
+    },
+    {
+      "success": false,
+      "final_dist": 1.2371089454422586,
+      "tip_dist_m": 1.2852068921042141,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.7532063042724135,
+      "elapsed_s": 0.1318091000066488
+    },
+    {
+      "success": false,
+      "final_dist": 1.1718728691572644,
+      "tip_dist_m": 1.279717282636087,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.8711081834624101,
+      "elapsed_s": 0.13207390000025043
+    },
+    {
+      "success": false,
+      "final_dist": 1.0377220784054229,
+      "tip_dist_m": 1.382579538514865,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.022313272989871402,
+      "elapsed_s": 0.13092049999977462
+    },
+    {
+      "success": false,
+      "final_dist": 1.1714050151274404,
+      "tip_dist_m": 0.7016685370243116,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.2266965301894761,
+      "elapsed_s": 0.1383944999979576
+    },
+    {
+      "success": false,
+      "final_dist": 1.1348799693511,
+      "tip_dist_m": 1.322549927874523,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.39746226906780513,
+      "elapsed_s": 0.1323065000033239
+    },
+    {
+      "success": false,
+      "final_dist": 1.115062555411033,
+      "tip_dist_m": 0.22599179778922507,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.10366618422281948,
+      "elapsed_s": 0.1312093000015011
+    },
+    {
+      "success": false,
+      "final_dist": 1.013753232882949,
+      "tip_dist_m": 1.1297120109665115,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.13725943306303812,
+      "elapsed_s": 0.13266809999913676
+    },
+    {
+      "success": false,
+      "final_dist": 1.1749109935439714,
+      "tip_dist_m": 0.8407557889995234,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.7076383181836172,
+      "elapsed_s": 0.13318390000495128
+    },
+    {
+      "success": false,
+      "final_dist": 0.942772491334819,
+      "tip_dist_m": 0.7937203524395607,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.03669194245033347,
+      "elapsed_s": 0.13144109999848297
+    },
+    {
+      "success": false,
+      "final_dist": 1.2400598274071342,
+      "tip_dist_m": 0.6243886067637222,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.6990212528724646,
+      "elapsed_s": 0.13166759999876376
+    },
+    {
+      "success": false,
+      "final_dist": 0.9698302490577857,
+      "tip_dist_m": 1.1675951577904289,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.03883177287831263,
+      "elapsed_s": 0.13975999999820488
+    },
+    {
+      "success": false,
+      "final_dist": 1.00105373539343,
+      "tip_dist_m": 0.6080848899938214,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.07556892507469393,
+      "elapsed_s": 0.1334530000021914
+    },
+    {
+      "success": false,
+      "final_dist": 0.9656625679824975,
+      "tip_dist_m": 0.8972007476726388,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.16815709572924076,
+      "elapsed_s": 0.1325520999962464
+    },
+    {
+      "success": false,
+      "final_dist": 0.764969052473818,
+      "tip_dist_m": 0.7125560093116267,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.34378300071824797,
+      "elapsed_s": 0.1316716000001179
+    },
+    {
+      "success": false,
+      "final_dist": 0.9236384720198011,
+      "tip_dist_m": 0.6843326620216958,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.11328096696808754,
+      "elapsed_s": 0.1333814000026905
+    },
+    {
+      "success": false,
+      "final_dist": 1.0328024903991817,
+      "tip_dist_m": 1.3569350665600637,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.15115396991843566,
+      "elapsed_s": 0.13269250000303145
+    },
+    {
+      "success": false,
+      "final_dist": 1.3813267468805992,
+      "tip_dist_m": 0.48753256425216673,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.6937981815821166,
+      "elapsed_s": 0.13204899999982445
+    },
+    {
+      "success": false,
+      "final_dist": 1.0965865470171128,
+      "tip_dist_m": 0.1456004772013894,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.196370404722229,
+      "elapsed_s": 0.132219700004498
+    },
+    {
+      "success": false,
+      "final_dist": 1.1785958662029847,
+      "tip_dist_m": 0.4551108674837252,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.24528517410113282,
+      "elapsed_s": 0.13221060000068974
+    },
+    {
+      "success": false,
+      "final_dist": 0.9502067617342136,
+      "tip_dist_m": 1.1138809691703888,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": 0.17512894371720156,
+      "elapsed_s": 0.1321453999989899
+    },
+    {
+      "success": false,
+      "final_dist": 1.4254733694815882,
+      "tip_dist_m": 0.7296108637907979,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -1.9222317143601617,
+      "elapsed_s": 0.1311550999962492
+    },
+    {
+      "success": false,
+      "final_dist": 1.1314802499402852,
+      "tip_dist_m": 0.8683674904646598,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.4029439316522363,
+      "elapsed_s": 0.13216020000254503
+    },
+    {
+      "success": false,
+      "final_dist": 1.1148501109907856,
+      "tip_dist_m": 0.8976046413695146,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.5465344756868653,
+      "elapsed_s": 0.1383034000027692
+    },
+    {
+      "success": false,
+      "final_dist": 1.3208181446814855,
+      "tip_dist_m": 1.2542441141521397,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.8263609720608369,
+      "elapsed_s": 0.13153260000399314
+    },
+    {
+      "success": false,
+      "final_dist": 1.139841035767866,
+      "tip_dist_m": 0.626961792950334,
+      "energy": 211.10287343210814,
+      "steps": 20,
+      "progress_ratio": -0.2354176041790339,
+      "elapsed_s": 0.13212600000406383
+    }
+  ]
+}

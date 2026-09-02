@@ -1,0 +1,48 @@
+{
+  "consistency": {
+    "contrastive": {
+      "consistency_rate": 1.0,
+      "total_tested": 400,
+      "drift_mean": 0.7970030968636275,
+      "drift_std": 0.2814165003359634
+    },
+    "exec_aware": {
+      "consistency_rate": 1.0,
+      "total_tested": 400,
+      "drift_mean": 0.9632626502215862,
+      "drift_std": 0.3496420227243095
+    },
+    "improvement": 0.0
+  },
+  "lever_control": {
+    "Contrastive + Dijkstra": {
+      "success_rate": 0.0,
+      "avg_energy": 0,
+      "avg_steps": 0,
+      "no_path": 32
+    },
+    "Contrastive + Greedy": {
+      "success_rate": 0.0,
+      "avg_energy": 0,
+      "avg_steps": 0,
+      "no_path": 37
+    },
+    "ExecAware + Dijkstra": {
+      "success_rate": 0.0,
+      "avg_energy": 0,
+      "avg_steps": 0,
+      "no_path": 35
+    },
+    "ExecAware + Greedy": {
+      "success_rate": 0.0,
+      "avg_energy": 0,
+      "avg_steps": 0,
+      "no_path": 39
+    }
+  },
+  "training": {
+    "contrastive_final_loss": 0.020739781350130215,
+    "exec_aware_final_loss": 0.020874285604804754,
+    "exec_aware_final_exec_loss": 0.003918346323189326
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "5": {
+    "reliable_edges": 100,
+    "nodes_with_outedge": 5,
+    "no_path_failures": 8,
+    "success_rate": 0.0,
+    "avg_energy": 0,
+    "n_tasks": 50
+  },
+  "8": {
+    "reliable_edges": 147,
+    "nodes_with_outedge": 8,
+    "no_path_failures": 16,
+    "success_rate": 0.02,
+    "avg_energy": 1.2,
+    "n_tasks": 50
+  },
+  "10": {
+    "reliable_edges": 189,
+    "nodes_with_outedge": 10,
+    "no_path_failures": 17,
+    "success_rate": 0.02,
+    "avg_energy": 1.2,
+    "n_tasks": 50
+  },
+  "15": {
+    "reliable_edges": 255,
+    "nodes_with_outedge": 15,
+    "no_path_failures": 19,
+    "success_rate": 0.02,
+    "avg_energy": 1.2,
+    "n_tasks": 50
+  },
+  "20": {
+    "reliable_edges": 306,
+    "nodes_with_outedge": 20,
+    "no_path_failures": 24,
+    "success_rate": 0.04,
+    "avg_energy": 1.2,
+    "n_tasks": 50
+  },
+  "30": {
+    "reliable_edges": 388,
+    "nodes_with_outedge": 30,
+    "no_path_failures": 29,
+    "success_rate": 0.0,
+    "avg_energy": 0,
+    "n_tasks": 50
+  }
+}

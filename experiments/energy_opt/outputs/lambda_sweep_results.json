@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "PureLEWM": {
+      "avg_distance": 0.5656389251023682,
+      "avg_energy": 0.21284976957785545,
+      "avg_progress": 0.20485881632560457,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.3367511912663778,
+      "n_tasks": 100
+    },
+    "EnergyOpt_ld=0.1": {
+      "avg_distance": 0.5747256684937981,
+      "avg_energy": 0.13258274795945307,
+      "avg_progress": 0.1913634887870292,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.5407197776020704,
+      "n_tasks": 100
+    },
+    "Gradient_lr=0.01": {
+      "avg_distance": 0.576875740217709,
+      "avg_energy": 0.17263389075890262,
+      "avg_progress": 0.18729013926140733,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.4152184498226411,
+      "n_tasks": 100
+    },
+    "Gradient_lr=0.05": {
+      "avg_distance": 0.5914043354060908,
+      "avg_energy": 0.20701074035597755,
+      "avg_progress": 0.16635175122525772,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.34639203651940015,
+      "n_tasks": 100
+    },
+    "Gradient_lr=0.1": {
+      "avg_distance": 0.6088027741324825,
+      "avg_energy": 0.2379071179188511,
+      "avg_progress": 0.14117953331869262,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.30130058576439234,
+      "n_tasks": 100
+    }
+  },
+  "config": {
+    "n_tasks": 100,
+    "n_steps": 50,
+    "n_candidates": 20,
+    "lambda_dist_values": [
+      0.1,
+      0.5,
+      1.0,
+      2.0
+    ]
+  }
+}
