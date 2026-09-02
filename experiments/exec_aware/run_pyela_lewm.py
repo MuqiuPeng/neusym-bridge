@@ -43,7 +43,7 @@ from experiments.lever_control.planner import (
 )
 
 OUTPUT_DIR = Path("experiments/exec_aware/outputs")
-LEWM_CKPT = Path("phase4/checkpoints/lewm_epoch049.pt")
+LEWM_CKPT = Path("experiments/energy_opt/outputs/lewm_simplified_retrained.pt")
 
 
 def _elapsed(t0):

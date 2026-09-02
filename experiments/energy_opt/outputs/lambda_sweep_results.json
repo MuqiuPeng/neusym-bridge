@@ -1,43 +1,43 @@
 {
   "summary": {
     "PureLEWM": {
-      "avg_distance": 642.4858695925913,
-      "avg_energy": 235.09991413608273,
-      "avg_progress": -46.02504813350395,
-      "success_rate": 0.0,
-      "avg_efficiency": 0.005894426524228358,
+      "avg_distance": 0.5656389251023682,
+      "avg_energy": 0.21284976957785545,
+      "avg_progress": 0.20485881632560457,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.3367511912663778,
       "n_tasks": 100
     },
     "EnergyOpt_ld=0.1": {
-      "avg_distance": 449.929023953138,
-      "avg_energy": 154.23097660013124,
-      "avg_progress": -31.935565491579837,
-      "success_rate": 0.0,
-      "avg_efficiency": 0.008985086566348617,
+      "avg_distance": 0.5747256684937981,
+      "avg_energy": 0.13258274795945307,
+      "avg_progress": 0.1913634887870292,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.5407197776020704,
       "n_tasks": 100
     },
     "Gradient_lr=0.01": {
-      "avg_distance": 514.0507415946992,
-      "avg_energy": 181.14462417513553,
-      "avg_progress": -36.60795462572919,
-      "success_rate": 0.0,
-      "avg_efficiency": 0.00764561846524842,
+      "avg_distance": 0.576875740217709,
+      "avg_energy": 0.17263389075890262,
+      "avg_progress": 0.18729013926140733,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.4152184498226411,
       "n_tasks": 100
     },
     "Gradient_lr=0.05": {
-      "avg_distance": 546.3594929837981,
-      "avg_energy": 194.9288170089724,
-      "avg_progress": -38.99377686650811,
-      "success_rate": 0.0,
-      "avg_efficiency": 0.007105478574813986,
+      "avg_distance": 0.5914043354060908,
+      "avg_energy": 0.20701074035597755,
+      "avg_progress": 0.16635175122525772,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.34639203651940015,
       "n_tasks": 100
     },
     "Gradient_lr=0.1": {
-      "avg_distance": 539.7077939413216,
-      "avg_energy": 194.98617980331176,
-      "avg_progress": -38.507822722026816,
-      "success_rate": 0.0,
-      "avg_efficiency": 0.007101650142469071,
+      "avg_distance": 0.6088027741324825,
+      "avg_energy": 0.2379071179188511,
+      "avg_progress": 0.14117953331869262,
+      "success_rate": 1.0,
+      "avg_efficiency": 0.30130058576439234,
       "n_tasks": 100
     }
   },

@@ -21,3 +21,10 @@ build/
 # Environments
 .venv/
 venv/
+
+# Claude Code local state (per-machine, includes worktrees)
+.claude/
+
+# Large generated datasets / diagnostic dumps
+*.h5
+*.pkl

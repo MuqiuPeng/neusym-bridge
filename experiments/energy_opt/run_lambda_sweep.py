@@ -38,7 +38,7 @@ from phase4.planning.planners import PureLEWMPlanner, EnergyOptimalPlanner, Grad
 OUTPUT_DIR = Path("experiments/energy_opt/outputs")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-LEWM_CHECKPOINT = Path("phase4/checkpoints/lewm_epoch049.pt")
+LEWM_CHECKPOINT = Path("experiments/energy_opt/outputs/lewm_simplified_retrained.pt")
 N_TASKS = 100
 N_STEPS = 50
 N_CANDIDATES = 20

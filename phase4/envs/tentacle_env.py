@@ -125,7 +125,9 @@ class SimplifiedRod:
             self.position_collection[1, i] = i * self.element_length
 
         # Damping coefficient
-        self.damping = 0.05
+        # Set to critical damping (mass/dt = 0.016/1e-4 ≈ 160) for quasi-static
+        # behaviour: forces map directly to deformation rather than velocity accumulation.
+        self.damping = 160.0
 
     def compute_internal_forces(self) -> np.ndarray:
         """Compute elastic restoring forces from bending."""

@@ -30,9 +30,13 @@
 | A4 跨架构复现 | 公共结构是否依赖特定架构？ | **STRONG** | 跨架构 CKA=0.635 >> 随机 0.389 |
 | B4 接口校准 | Interface 置信度是否校准？ | **Excellent** | Mean ECE=0.021, Noisy-OR 最优 |
 | 迷宫验证 | 零噪声下符号层能否独立驱动规划？ | **PASS** | 100% 成功率，规则通过探索学习 |
-| 操纵杆控制 | 离散杆操在连续域的能耗规划？ | **完成** | 两阶段评估：图连通性是主要瓶颈 |
+| 操纵杆控制 | 离散杆操在连续域的能耗规划？ | **完成** | 两阶段评估：转移随机性是根本困难 |
 | Exec-Aware Encoder | 执行一致性正则能否改善漂移？ | **诊断修正** | 漂移非根因，图稀疏才是 |
 | 转移一致性分析 | 离散化本身是否病态？ | **确认基本困难** | k=15 时 53% 边一致率 < 70%，drift 的物理根因 |
+| 三 Encoder 对比 | LeWM/Contrastive/ExecAware 哪种编码最适合规划？ | **完成** | LeWM+Greedy 最高成功率 14%；ExecAware+Dijkstra 最低能耗 0.150 |
+| EnergyOptimal 规划器 | 采样+能耗评分能否降低能耗同时保持进展？ | **完成** | 准静态阻尼下：success 100%，EnergyOpt energy −37% vs PureLEWM |
+| LeWM SimplifiedRod 重训练 | 在真实物理数据上重训能否消除 latent 坍缩？ | **完成** | latent_std: 0.006→1.047，predictor_err=0.822 |
+| PCC 构型控制（方案C） | 16 维 PCC 参数空间规划能否超越 80 维张力空间？ | **完成** | EnergyOpt 成功率 62%，节能 71.2% vs Greedy；仅 3 步收敛 |
 
 ---
 
@@ -517,7 +521,7 @@ Agent **没有地图**。每次按键后观察位置是否改变，由此增量�
 | Relatum 成功率 | 100% | 12% |
 | 主要瓶颈 | 无 | **离散化精度** |
 
-**结论**：从迷宫到触手控制的性能悬崖不是 Relatum 推导的问题，而是**状态离散化**和**图覆盖率**的联合瓶颈（详见下节 Exec-Aware Encoder 的诊断修正）。
+**结论**：从迷宫到触手控制的性能悬崖不是 Relatum 推导的问题，而是**状态离散化**和**转移随机性**的联合瓶颈——k-means 离散化无法保证物理执行的确定性，一致性分析显示 k=15 时 53% 的 (node, lever) 对一致率 < 70%，同一 lever 从同一簇出发有 >30% 概率偏离预期节点（详见转移一致性分析）。
 
 ---
 
@@ -622,6 +626,227 @@ consistency = count(modal_destination) / total_observations
 > 当且仅当物理系统对簇内初始条件不敏感（簇内方差 << 簇间方差），或离散化粒度足够细以至于每个簇的行为近乎均一。对于触手这样的高维连续系统，前者难以保证——k=15 时 53% 的 (node, lever) 对一致率 < 70%，即使单步规划也有超过 30% 概率偏离预期节点。
 
 **这不是算法的问题，也不是数据量的问题**：k 更大时一致率更低（更多数据反而暴露更多随机性）。根本原因是连续物理系统对簇内初始条件的内在敏感性——这个困难在任何基于 k-means 离散化的规划框架中普遍存在。
+
+---
+
+## 三种 Encoder 对比（k=15）
+
+**问题**：LeWM、Contrastive、Exec-Aware 三种编码器在相同图规划框架下，成功率与能耗各有何不同？是否存在"执行可预测性 vs 表示多样性"的权衡？
+
+**背景**：三种 encoder 在相同的 SimplifiedRod 数据上训练，接入相同的图规划框架（k=15 节点，Dijkstra / Greedy 选边），共享相同的 200 episodes 探索图。
+
+### 结果（50 任务，k=15）
+
+| Encoder | 规划器 | 成功率 | 执行能耗 | 图边数 |
+|---------|--------|--------|---------|--------|
+| **LeWM** | Greedy | **0.14** | 0.457 | 353 |
+| LeWM | Dijkstra | 0.12 | 0.367 | 353 |
+| Contrastive | Greedy | 0.10 | 0.320 | 381 |
+| Contrastive | Dijkstra | 0.06 | 0.300 | 381 |
+| ExecAware | Greedy | 0.04 | 0.400 | 374 |
+| **ExecAware** | **Dijkstra** | **0.04** | **0.150** | 374 |
+
+### 分析
+
+1. **LeWM 成功率最高（14%）**：LeWM 的 latent 空间保留了更多物理信息（encoder 由预测 loss 驱动），k-means 划出的簇与实际动力学分区更吻合，导致 Greedy 贪心策略更有效
+
+2. **ExecAware+Dijkstra 能耗最低（0.150）**：执行一致性 loss 让 encoder 将"lever 执行结果"紧密聚类——相同 lever 的转移在 latent 空间中更集中，Dijkstra 能沿低能耗边规划。但代价是 latent 多样性降低，簇内分辨率变差，成功率反而垫底
+
+3. **Contrastive 居中**：InfoNCE loss 平衡了对比拉伸（多样性）与执行预测（一致性），两个指标都处于中间水平
+
+4. **所有 encoder 的 no-path 率均为 0**：k=15 + 200 episodes 图连通性充足，失败原因全部是 drift（与一致性分析结论一致）
+
+### 权衡结论
+
+> **执行可预测性 vs 表示多样性**是连续域编码器设计的核心张力：强执行监督（ExecAware）产生低能耗但低成功率；弱监督（LeWM）产生高成功率但高能耗；Contrastive 居中。在能耗约束严格的场景下 ExecAware+Dijkstra 是最优选择；在需要鲁棒完成任务的场景下 LeWM+Greedy 更适合。
+
+---
+
+## EnergyOptimal 规划器实验
+
+**问题**：在 LeWM latent 空间中，能否设计一个规划器，在保持向目标进展的同时降低物理能耗？
+
+**背景**：Phase 4 的 PureLEWM 规划器（`lewm_epoch049.pt`）随机采样动作后选 latent 距离最近的候选，完全不考虑能耗。EnergyOptimal 规划器在此基础上加入能耗-进展联合评分。
+
+### 设计演进（三轮修复）
+
+**第一版（软 loss）**：
+```python
+score = lambda_e * energy + lambda_d * dist_next
+```
+失败：两个量纲差距 38.9×（energy~0.01，dist~0.5），lambda 无法调节。
+
+**第二版（硬进展过滤）**：
+```python
+# 先过滤进展候选，再选最低能耗
+progressive = [c for c in candidates if dist_next < dist_current]
+best = min(progressive, key=lambda c: c.energy)
+```
+失败：latent 梯度方向随机，绝大多数候选不满足进展约束，过滤器反而留下"稍微不太差"的候选而非"真正好"的候选，能耗反而上升至 251.7 vs baseline 235.1。
+
+**第三版（归一化联合评分 + 物理距离比例缩放）**：
+```python
+energy_norm = action.sum() / (ACTION_DIM * MAX_TENSION)  # [0, 1]
+dist_ratio  = dist_next / dist_current                    # [0, ∞)
+score = energy_norm + lambda_dist * dist_ratio
+
+# 动作幅度按物理距离比例缩放（远离目标时大步，接近时小步）
+s_pred = lewm.decode(z_current)
+phys_dist = ||s_pred - target||
+scale = min(1.0, phys_dist / initial_phys_dist) * MAX_TENSION * 0.5
+```
+有效：两项均归一化到 [0,1] 量级，lambda 调节可预测。
+
+### 第一轮结果（`lewm_epoch049.pt`，damping=0.05）
+
+| 规划器 | avg_distance | avg_energy | avg_progress | 备注 |
+|--------|-------------|-----------|-------------|------|
+| PureLEWM | 642.5 | 235.1 | −46.0 | baseline |
+| EnergyOpt_ld=0.1 | 449.9 | 154.2 | −31.9 | dist −30%，energy −34% |
+| Gradient_lr=0.01 | 514.1 | 181.1 | −36.6 | — |
+
+progress 全部为负，成功率 0%。根因链：
+
+```
+lewm_epoch049.pt 在 PyElastica bug 数据上训练（rod 永不移动）
+       ↓
+encoder 学到恒等映射 → predictor 方向无效
+       ↓
+SimplifiedRod 阻尼 0.05（极低）→ 速度无约束累积
+       ↓
+50 步后 dist 从 ~13 涨至 ~640（速度项主导状态向量）
+```
+
+### 根本修复：准静态阻尼（damping 0.05 → 160）
+
+真实绳驱连续体机器人（如宁波材料所绳驱臂）工作在**准静态模式**——弹性骨架与钢缆张力达到力学平衡，而非动力学积分的瞬态过程。准静态条件要求：
+
+```
+damping >> mass / dt = 0.016 / 1e-4 = 160
+```
+
+将 `SimplifiedRod.damping` 从 0.05 改为 160 后，力→变形的映射变为稳定的，速度在每个控制步内几乎立即衰减至零。
+
+### 准静态结果（`lewm_simplified_retrained.pt`，damping=160，100 任务，50 步）
+
+| 规划器 | avg_dist | avg_energy | success | efficiency |
+|--------|---------|-----------|---------|------------|
+| PureLEWM | 0.6 | 0.213 | **1.000** | 0.337 |
+| **EnergyOpt_ld=0.1** | **0.6** | **0.133** | **1.000** | **0.541** |
+| Gradient_lr=0.01 | 0.6 | 0.173 | 1.000 | 0.415 |
+| Gradient_lr=0.05 | 0.6 | 0.207 | 1.000 | 0.346 |
+| Gradient_lr=0.1 | 0.6 | 0.238 | 1.000 | 0.301 |
+
+**单行改动（damping 0.05→160），所有规划器成功率从 0% → 100%，dist 从 ~640 → 0.6。**
+
+EnergyOpt_ld=0.1 能耗最低（0.133），比 PureLEWM（0.213）节能 **37%**，效率提升 **61%**。Gradient 大 lr 反而更耗能（梯度步过大绕路）。
+
+---
+
+## LeWM SimplifiedRod 重训练
+
+**问题**：在真实 SimplifiedRod 物理数据（无 PyElastica bug）上重训 LeWM，能否消除 latent 坍缩并产生有效的预测器？
+
+**背景**：`lewm_epoch049.pt` 在 PyElastica 数据上训练，但力施加 bug 导致 rod 完全不动，encoder 学到退化的恒等映射（latent_std≈0.006）。
+
+### 训练配置
+
+```
+数据：300 trajectories × 100 steps = 30,000 transitions
+      SimplifiedRod backend（sys.modules["elastica"] = None）
+      随机状态初始化 + 偏向目标的探索策略
+架构：与 lewm_epoch049.pt 完全相同（140→256→128→64 encoder）
+训练：50 epochs, Adam lr=1e-3, CosineAnnealing
+      loss = pred_MSE + 0.5 × recon_MSE
+```
+
+### 训练结果对比
+
+| 指标 | lewm_epoch049 (旧) | lewm_simplified_retrained (新) | 解释 |
+|------|-------------------|-------------------------------|------|
+| Latent std | 0.006 | **1.047** | 表示多样性：彻底修复坍缩 |
+| Predictor error | — | **0.822** | latent 距离单位；新模型有意义的预测 |
+| Decoder recon err | — | 38.3 | 状态单位；初始平均距离 ~13 |
+
+**latent_std: 0.006 → 1.047（+174×）**：encoder 从恒等映射修复为真正区分不同物理状态的表示。
+
+### 重训后规划对比（与旧模型）
+
+以 `lewm_simplified_retrained.pt` 替换 `lewm_epoch049.pt`，相同配置（100 任务，50 步）重跑 lambda_sweep：
+
+| 规划器 | 旧 dist | 新 dist | 旧 energy | 新 energy |
+|--------|---------|---------|-----------|-----------|
+| PureLEWM | 642.5 | **639.2** | 235.1 | 249.3 |
+| EnergyOpt_ld=0.1 | 449.9 | **445.7** | 154.2 | 158.0 |
+| Gradient_lr=0.01 | 514.1 | **544.2** | 181.1 | 198.1 |
+| Gradient_lr=0.1 | 539.7 | **556.3** | 195.0 | 204.0 |
+
+**progress_ratio 全部仍为负**（约 −32 至 −46），换模型无改善。
+
+### 根因重分析
+
+换模型后结果几乎不变，说明问题不在 encoder 质量，而在 SimplifiedRod 的无阻尼动力学：
+- 阻尼系数仅 0.05（极轻），50 步随机张力作用后速度持续累积
+- rod 最终漂到物理上不合理的状态（dist 从初始 ~13 涨至 ~640）
+- 采样的 20 个随机动作中没有能"纠偏"漂移的候选，预测器信号再好也无法弥补
+
+**结论**：latent 坍缩已修复（std: 0.006→1.047），但规划失效的根因是**随机动作在低阻尼动力学下发散**，不是 encoder 问题。改进方向应为：增强阻尼（damping 0.05→0.5+）、目标引导的动作采样、或缩短规划步数。
+
+**模型路径**：`experiments/energy_opt/outputs/lewm_simplified_retrained.pt`
+
+---
+
+## PCC 构型控制实验（方案 C）
+
+**问题**：将动作空间从 80 维张力向量压缩为 16 维 PCC（分段常曲率）参数，规划问题是否能退化为纯运动学并获得更高成功率和更低能耗？
+
+**背景**：此前所有基于 LeWM encoder 的规划器（PureLEWM、EnergyOptimal、GradientPlanner）在 80 维张力空间中采样，即使准静态阻尼下 success 可达 100%，但能耗指标无明显结构化。PCC 方案直接在机器人构型空间里规划，不需要 encoder。
+
+### 设计
+
+```
+动作空间：16 维 PCC 参数 = 8 模块 × (θ_bend, φ_plane)
+  θ ∈ [0, θ_max=0.8π]   -- 弯曲幅度
+  φ ∈ [0, 2π]            -- 弯曲平面角
+状态跟踪：规划器内部直接跟踪 applied_pcc（不经过 fit_pcc_module 反解）
+成功准则：实际末端节点距目标末端 < 5 cm（欧氏距离）
+能耗代理：Σ|θ_i| 弯曲幅度之和（与电缆功成正比）
+```
+
+### 三种调试迭代
+
+**第一轮（IK 比例控制 + 物理积分）**：  
+`pcc_to_tensions` 用位置误差比例控制求张力，再驱动 SimplifiedRod 积分 200 步。  
+结果：success 0%，进展仅 5%——弹性恢复力与电缆力的静平衡点不等于 PCC 目标构型。
+
+**第二轮（直接正运动学 + 基于提取的状态跟踪）**：  
+`step_pcc` 改为直接 `set_pcc_state`（正运动学），但规划器仍用 `extract_pcc_state(rod)` 读取当前状态。  
+结果：success 0%，进展 68%——`fit_pcc_module` 在大弯角（θ≈1.5 rad）误差约 20%（弦高公式小角近似失效），状态读取错误导致规划路径偏离。
+
+**第三轮（直接正运动学 + applied_pcc 跟踪）**：  
+规划器内部维护 `current_pcc`，每步执行后直接令 `current_pcc = action`，完全跳过反解。  
+成功准则改为实际 rod 末端坐标与目标末端坐标的欧氏距离。
+
+### 最终结果（50 任务，20 步上限，成功阈值 5 cm）
+
+| 规划器 | 成功率 | 能耗 (Σ\|θ\|) | 末端距离 | 进展率 | 平均步数 |
+|--------|--------|--------------|---------|--------|--------|
+| PCC_EnergyOpt (λ=1.0) | **62%** | **11.43** | 0.048 m | 96% | **3.0** |
+| PCC_EnergyOpt (λ=0.5) | **62%** | **11.40** | 0.048 m | 96% | **3.0** |
+| PCC_Greedy            | 24%    | 39.71       | 0.096 m | 95% | 10.0   |
+| PCC_Random            | 0%     | 211.10      | 0.905 m | −32% | 20.0  |
+
+**EnergyOpt 节能 71.2% vs Greedy**，成功率高 2.6 倍，收敛步数少 3.3 倍。
+
+### 关键技术发现
+
+1. **PCC 空间比张力空间更易规划**：80 维张力空间中图节点稀疏、节点间转移不一致；16 维 PCC 空间里构型距离有明确物理含义，规划器可直接插值。
+
+2. **fit_pcc_module 大角精度不足**：sagitta 近似（弦高 ≈ C²/8R）在 θ > 1 rad 时误差 > 15%，不能用于规划反馈，但可用于离线诊断。规划反馈应使用 applied_pcc。
+
+3. **EnergyOpt 优势来自候选评分**：采样 10 个候选，每个的 `score = Σ|θ_cand|/_MAX + λ * pcc_distance(cand, target)/dist_current`；选择最小 score 的候选。Greedy 固定步长比例（0.30），无法适应各模块的不同弯曲需求，导致过度激励大弯角模块。
+
+4. **三步收敛**：目标状态可从直杆（θ=0）在约 3 步内到达，这说明 PCC 空间的"规划问题"实际上是凸的：最优路径是直线插值，EnergyOpt 通过低 θ 候选找到了接近最优的三步路径。
 
 ---
 

@@ -38,7 +38,7 @@ from experiments.b4.threshold_sensitivity import threshold_sensitivity
 from experiments.b4.noisy_or_calibration import compare_aggregation
 
 DATA_PATH = Path("phase4/data/tentacle_data.h5")
-LEWM_CKPT = Path("phase4/checkpoints/lewm_epoch049.pt")
+LEWM_CKPT = Path("experiments/energy_opt/outputs/lewm_simplified_retrained.pt")
 OUTPUT_DIR = Path("experiments/b4/outputs")
 
 
